@@ -608,7 +608,7 @@
     "id": 19,
     "name": "Agility",
     "description": "",
-    "statusDescription": "3 CritDamage%\n",
+    "statusDescription": "3% CritDamage\n",
     "connectedNodes": [
       2,
       24,
@@ -685,7 +685,7 @@
     "id": 22,
     "name": "Agility",
     "description": "",
-    "statusDescription": "3 AttackSPD%\n",
+    "statusDescription": "3% AttackSPD\n",
     "connectedNodes": [
       17,
       12,
@@ -916,7 +916,7 @@
     "id": 30,
     "name": "Dexterity",
     "description": "",
-    "statusDescription": "3 CritChance%\n",
+    "statusDescription": "3% CritChance\n",
     "connectedNodes": [
       36,
       39,
@@ -942,7 +942,7 @@
     "id": 31,
     "name": "Dexterity",
     "description": "",
-    "statusDescription": "3 CritDamage%\n",
+    "statusDescription": "3% CritDamage\n",
     "connectedNodes": [
       36,
       37,
@@ -1025,7 +1025,7 @@
     "id": 34,
     "name": "Dexterity",
     "description": "",
-    "statusDescription": "5 CritShield%\n",
+    "statusDescription": "5% CritShield\n",
     "connectedNodes": [
       33,
       4,
@@ -1529,7 +1529,7 @@
     "id": 50,
     "name": "Wisdom",
     "description": "",
-    "statusDescription": "3 HealAMP%\n15 BuffAMP%\n15 DebuffAMP%\n",
+    "statusDescription": "3% HealAMP\n1% BuffAMP\n1% DebuffAMP\n",
     "connectedNodes": [
       46,
       52,
@@ -1546,14 +1546,14 @@
         "passiveMult": 0.0
       },
       "BUFFAMPLIFIER": {
-        "flat": 0.15,
+        "flat": 0.015,
         "mult": 1.0,
         "globalMult": 1.0,
         "equipmentMult": 0.0,
         "passiveMult": 0.0
       },
       "DEBUFFAMPLIFIER": {
-        "flat": 0.15,
+        "flat": 0.015,
         "mult": 1.0,
         "globalMult": 1.0,
         "equipmentMult": 0.0,
@@ -1599,7 +1599,7 @@
     "id": 52,
     "name": "Wisdom",
     "description": "",
-    "statusDescription": "1.5 HealAMP%\n",
+    "statusDescription": "1% HealAMP\n",
     "connectedNodes": [
       50,
       62,
@@ -1625,7 +1625,7 @@
     "id": 53,
     "name": "Wisdom",
     "description": "",
-    "statusDescription": "1 BuffAMP%\n",
+    "statusDescription": "1% BuffAMP\n",
     "connectedNodes": [
       45,
       50,
@@ -1683,7 +1683,7 @@
     "id": 55,
     "name": "Wisdom",
     "description": "",
-    "statusDescription": "5 CastSPD%\n",
+    "statusDescription": "5% CastSPD\n",
     "connectedNodes": [
       5,
       56,
@@ -1741,7 +1741,7 @@
     "id": 57,
     "name": "Wisdom",
     "description": "",
-    "statusDescription": "3 DebuffAMP%\n",
+    "statusDescription": "3% DebuffAMP\n",
     "connectedNodes": [
       45,
       51
@@ -1766,7 +1766,7 @@
     "id": 58,
     "name": "Wisdom",
     "description": "",
-    "statusDescription": "3 CritChance%\n",
+    "statusDescription": "3% CritChance\n",
     "connectedNodes": [
       59,
       51
@@ -1842,7 +1842,7 @@
     "id": 61,
     "name": "Wisdom And Intelligence",
     "description": "",
-    "statusDescription": "-2 Reservation%\n",
+    "statusDescription": "-2% Reservation\n",
     "connectedNodes": [
       62,
       63,
@@ -2085,7 +2085,7 @@
     "id": 69,
     "name": "Intelligence",
     "description": "",
-    "statusDescription": "4 CritDamage%\n",
+    "statusDescription": "4% CritDamage\n",
     "connectedNodes": [
       65,
       76
@@ -2110,7 +2110,7 @@
     "id": 70,
     "name": "Intelligence",
     "description": "",
-    "statusDescription": "2 BuffAMP%\n",
+    "statusDescription": "2% BuffAMP\n",
     "connectedNodes": [
       65,
       71
@@ -2187,7 +2187,7 @@
     "id": 73,
     "name": "Intelligence",
     "description": "",
-    "statusDescription": "1 HealAMP%\n1 DebuffAMP%\n",
+    "statusDescription": "1% HealAMP\n1% DebuffAMP\n",
     "connectedNodes": [
       72,
       65
@@ -2303,7 +2303,7 @@
     "id": 77,
     "name": "Intelligence And Luck",
     "description": "",
-    "statusDescription": "1 INT\n1 LUK\n1 CritChance%\n",
+    "statusDescription": "1 INT\n1 LUK\n1% CritChance\n",
     "connectedNodes": [
       78,
       79,
@@ -2380,7 +2380,7 @@
     "id": 79,
     "name": "Intelligence And Luck",
     "description": "",
-    "statusDescription": "1 INT\n2 CritDamage%\n",
+    "statusDescription": "1 INT\n2% CritDamage\n",
     "connectedNodes": [
       76,
       77
@@ -2841,7 +2841,7 @@
     "id": 96,
     "name": "All Status And Equipment Amplify",
     "description": "",
-    "statusDescription": "2 AttackSPD%\nAmplify Accessory by 2%\n",
+    "statusDescription": "2% AttackSPD\nAmplify Accessory by 2%\n",
     "connectedNodes": [
       97,
       95,
@@ -3414,7 +3414,7 @@
     "id": 117,
     "name": "All Status",
     "description": "",
-    "statusDescription": "4 CritShield%\n1 CritChance%\n",
+    "statusDescription": "4% CritShield\n1% CritChance\n",
     "connectedNodes": [
       8,
       120,
@@ -3447,7 +3447,7 @@
     "id": 118,
     "name": "All Status",
     "description": "",
-    "statusDescription": "3 HealAMP%\n",
+    "statusDescription": "3% HealAMP\n",
     "connectedNodes": [
       112,
       114
@@ -3512,7 +3512,7 @@
     "id": 120,
     "name": "All Status",
     "description": "",
-    "statusDescription": "30 AttackSPD%\n2 MP\n",
+    "statusDescription": "30% AttackSPD\n2 MP\n",
     "connectedNodes": [
       117,
       112
@@ -3544,7 +3544,7 @@
     "id": 121,
     "name": "All Status",
     "description": "",
-    "statusDescription": "0.8 MSPD\n2 BuffAMP%\n",
+    "statusDescription": "0.8 MSPD\n2% BuffAMP\n",
     "connectedNodes": [
       115,
       97,
@@ -3577,7 +3577,7 @@
     "id": 122,
     "name": "All Status",
     "description": "",
-    "statusDescription": "5 CritDamage%\n",
+    "statusDescription": "5% CritDamage\n",
     "connectedNodes": [
       115,
       112,
@@ -3689,7 +3689,7 @@
     "id": 126,
     "name": "All Status And Vitality",
     "description": "",
-    "statusDescription": "4 HP\n3 CritShield%\n",
+    "statusDescription": "4 HP\n3% CritShield\n",
     "connectedNodes": [
       125,
       124,
@@ -3917,7 +3917,7 @@
     "id": 134,
     "name": "Vitality",
     "description": "",
-    "statusDescription": "5 DamageRED%\n",
+    "statusDescription": "5% DamageRED\n",
     "connectedNodes": [
       133,
       129,
@@ -3969,7 +3969,7 @@
     "id": 136,
     "name": "Vitality",
     "description": "",
-    "statusDescription": "4 AttackSPD%\n",
+    "statusDescription": "4% AttackSPD\n",
     "connectedNodes": [
       128,
       140
@@ -4312,7 +4312,7 @@
     "id": 148,
     "name": "Strength",
     "description": "",
-    "statusDescription": "12 Evasion\n2 CritDamage%\n",
+    "statusDescription": "12 Evasion\n2% CritDamage\n",
     "connectedNodes": [
       149,
       11
@@ -4370,7 +4370,7 @@
     "id": 150,
     "name": "Strength",
     "description": "",
-    "statusDescription": "2 AttackSPD%\n9 Accuracy\n",
+    "statusDescription": "2% AttackSPD\n9 Accuracy\n",
     "connectedNodes": [
       11,
       147
@@ -4469,7 +4469,7 @@
     "id": 153,
     "name": "Strength",
     "description": "",
-    "statusDescription": "2 RATK\n2 CritChance%\n",
+    "statusDescription": "2 RATK\n2% CritChance\n",
     "connectedNodes": [
       14,
       11
