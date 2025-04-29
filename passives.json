@@ -354,7 +354,7 @@
   },
   {
     "id": 11,
-    "name": "Might",
+    "name": "Mighty",
     "description": "",
     "statusDescription": "5% GlobalPATK\n",
     "connectedNodes": [
@@ -384,7 +384,7 @@
   },
   {
     "id": 12,
-    "name": "Light",
+    "name": "Light Weight",
     "description": "",
     "statusDescription": "9% GlobalMSPD\n",
     "connectedNodes": [
