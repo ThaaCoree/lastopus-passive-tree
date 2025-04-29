@@ -3512,7 +3512,7 @@
     "id": 120,
     "name": "All Status",
     "description": "",
-    "statusDescription": "30% AttackSPD\n2 MP\n",
+    "statusDescription": "3% AttackSPD\n2 MP\n",
     "connectedNodes": [
       117,
       112
@@ -3521,7 +3521,7 @@
     "y": 2512.7876848041456,
     "stats": {
       "ATTACKSPEED": {
-        "flat": 0.3,
+        "flat": 0.03,
         "mult": 1.0,
         "globalMult": 1.0,
         "equipmentMult": 0.0,
