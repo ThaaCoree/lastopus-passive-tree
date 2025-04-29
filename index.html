@@ -57,9 +57,33 @@ let scale = 1.0;   // การซูม
 let isDragging = false;
 let dragStartX = 0;
 let dragStartY = 0;
+        // วาดโหนด
+const images = {
+SMALL: new Image(),
+NOTABLE: new Image(),
+KEYSTONE: new Image()
+};
+
+images.SMALL.src = "/lastopus-passive-tree/images/small_node2.png";
+images.NOTABLE.src = "/lastopus-passive-tree/images/notable_node2.png";
+images.KEYSTONE.src = "/lastopus-passive-tree/images/keystone_node2.png";
+
+const imageSizes = {
+SMALL: 40,
+NOTABLE: 50,
+KEYSTONE: 60
+};
+
+Promise.all([
+new Promise(resolve => images.SMALL.onload = resolve),
+new Promise(resolve => images.NOTABLE.onload = resolve),
+new Promise(resolve => images.KEYSTONE.onload = resolve),
+]).then(() => {
+renderNodes();
+});
 
 // ฟังก์ชันวาด
-function drawTree() {
+    function drawTree() {
     ctx.setTransform(scale, 0, 0, scale, offsetX, offsetY); // แปลงพิกัด
     ctx.clearRect(-offsetX / scale, -offsetY / scale, canvas.width / scale, canvas.height / scale);
 
@@ -80,32 +104,6 @@ function drawTree() {
             }
         }
     }
-
-    // วาดโหนด
-    const images = {
-    SMALL: new Image(),
-    NOTABLE: new Image(),
-    KEYSTONE: new Image()
-    };
-
-    images.SMALL.src = "/lastopus-passive-tree/images/small_node2.png";
-    images.NOTABLE.src = "/lastopus-passive-tree/images/notable_node2.png";
-    images.KEYSTONE.src = "/lastopus-passive-tree/images/keystone_node2.png";
-
-    const imageSizes = {
-    SMALL: 40,
-    NOTABLE: 50,
-    KEYSTONE: 60
-    };
-
-    Promise.all([
-    new Promise(resolve => images.SMALL.onload = resolve),
-    new Promise(resolve => images.NOTABLE.onload = resolve),
-    new Promise(resolve => images.KEYSTONE.onload = resolve),
-    ]).then(() => {
-    renderNodes();
-    });
-
 }
 
 // ฟังก์ชันอัปเดต Property Panel
