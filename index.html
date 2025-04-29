@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Passive Tree Viewer</title>
+    <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        background-color: #1D1F29;
+    }
+    #container {
+        display: flex;
+        height: 100%;
+        width: 100%;
+    }
+    #treeCanvas {
+        flex-grow: 1;
+        background-color: #1D1F29;
+    }
+    #propertyPanel {
+        width: 250px;
+        background-color: #2D2F39;
+        color: white;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+</style>
+
+</head>
+<body>
+<div id="container">
+<canvas id="treeCanvas"></canvas>
+    <div id="propertyPanel">
+        <h2>Node Property</h2>
+        <p id="nodeName"></p>
+        <p id="nodeStatusDes"></p>
+        <p id="nodeDes">-</p>
+    </div>
+</div>
+
+<script>
+const canvas = document.getElementById('treeCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth - 250;
+canvas.height = window.innerHeight;
+
+let nodes = [];
+let selectedNode = null;
+
+let offsetX = 0;   // การเลื่อนหน้าจอ
+let offsetY = 0;
+let scale = 1.0;   // การซูม
+
+let isDragging = false;
+let dragStartX = 0;
+let dragStartY = 0;
+
+// ฟังก์ชันวาด
+function drawTree() {
+    ctx.setTransform(scale, 0, 0, scale, offsetX, offsetY); // แปลงพิกัด
+    ctx.clearRect(-offsetX / scale, -offsetY / scale, canvas.width / scale, canvas.height / scale);
+
+    // วาดเส้นเชื่อม
+    ctx.strokeStyle = 'white';
+    ctx.lineWidth = 2 / (scale*1.5); // เส้นบางลงเมื่อซูมออก
+    for (const node of nodes) {
+    const toReduceX = 2400;
+    const toReduceY = 2400;
+        if (!node.connectedNodes) continue;
+        for (const connId of node.connectedNodes) {
+            const target = nodes.find(n => n.id === connId);
+            if (target) {
+                ctx.beginPath();
+                ctx.moveTo(node.x-toReduceX, node.y-toReduceY);
+                ctx.lineTo(target.x-toReduceX, target.y-toReduceY);
+                ctx.stroke();
+            }
+        }
+    }
+
+    // วาดโหนด
+    const images = {
+    SMALL: new Image(),
+    NOTABLE: new Image(),
+    KEYSTONE: new Image()
+    };
+
+    images.SMALL.src = "/images/small_node.png";
+    images.NOTABLE.src = "/images/notable_node.png";
+    images.KEYSTONE.src = "/images/keystone_node.png";
+
+    const imageSizes = {
+    SMALL: 40,
+    NOTABLE: 50,
+    KEYSTONE: 60
+    };
+
+    Promise.all([
+    new Promise(resolve => images.SMALL.onload = resolve),
+    new Promise(resolve => images.NOTABLE.onload = resolve),
+    new Promise(resolve => images.KEYSTONE.onload = resolve),
+    ]).then(() => {
+    renderNodes();
+    });
+
+}
+
+// ฟังก์ชันอัปเดต Property Panel
+function updatePropertyPanel(node) {
+    document.getElementById('nodeName').innerText = `${node ? node.name : ''}`;
+    document.getElementById('nodeStatusDes').innerText = `${node ? node.statusDescription : ''}`;
+    document.getElementById('nodeDes').innerText = `${node ? node.description : ''}`;
+}
+
+function renderNodes() {
+    for (const node of nodes) {
+        const toReduceX = 2400;
+        const toReduceY = 2400;
+
+        const image = images[node.nodeType];
+        const imageSize = imageSizes[node.nodeType];
+
+        if (!image || !imageSize) continue;
+
+        const drawX = node.x - toReduceX - imageSize / 2;
+        const drawY = node.y - toReduceY - imageSize / 2;
+
+        ctx.drawImage(image, drawX, drawY, imageSize, imageSize);
+
+        // Highlight node ที่ถูกเลือก
+        if (node === selectedNode) {
+            ctx.beginPath();
+            ctx.arc(node.x - toReduceX, node.y - toReduceY, imageSize / 2 + 4, 0, Math.PI * 2);
+            ctx.strokeStyle = "gold";
+            ctx.lineWidth = 3;
+            ctx.stroke();
+        }
+    }
+}
+
+// เมื่อคลิกเพื่อเลือกโหนด
+canvas.addEventListener('click', (e) => {
+    if (isDragging) return; // ถ้ากำลังลาก ไม่ต้องเลือก
+
+    const toReduceX = 2400;
+    const toReduceY = 2400;
+    const rect = canvas.getBoundingClientRect();
+    const clickX = (e.clientX - rect.left - offsetX) / scale;
+    const clickY = (e.clientY - rect.top - offsetY) / scale;
+
+    selectedNode = null;
+    for (const node of nodes) {
+        const dx = node.x - toReduceX - clickX;
+        const dy = node.y - toReduceY - clickY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        if (distance <= 20) {
+            selectedNode = node;
+            break;
+        }
+    }
+    updatePropertyPanel(selectedNode);
+    drawTree();
+});
+
+// ลากหน้าจอด้วยเมาส์
+canvas.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    dragStartX = e.clientX - offsetX;
+    dragStartY = e.clientY - offsetY;
+});
+
+canvas.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+        offsetX = e.clientX - dragStartX;
+        offsetY = e.clientY - dragStartY;
+        drawTree();
+    }
+});
+
+canvas.addEventListener('mouseup', () => {
+    isDragging = false;
+});
+
+canvas.addEventListener('mouseleave', () => {
+    isDragging = false;
+});
+
+// ซูมด้วย Scroll
+canvas.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    const zoomFactor = 1.1;
+    const mouseX = (e.offsetX - offsetX) / scale;
+    const mouseY = (e.offsetY - offsetY) / scale;
+
+    if (e.deltaY < 0) { // scroll ขึ้น = zoom in
+        scale *= zoomFactor;
+    } else { // scroll ลง = zoom out
+        scale /= zoomFactor;
+    }
+
+    // ทำให้ซูมเข้าหรือออกไปทางจุดที่เมาส์อยู่
+    offsetX = e.offsetX - mouseX * scale;
+    offsetY = e.offsetY - mouseY * scale;
+
+    drawTree();
+});
+
+fetch('passives.json')
+    .then(response => response.json())
+    .then(data => {
+        nodes = data;
+        drawTree();
+    });
+</script>
+
+
+</body>
+</html>
