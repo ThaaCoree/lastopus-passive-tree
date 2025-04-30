@@ -1979,7 +1979,7 @@
     "id": 65,
     "name": "Insight",
     "description": "",
-    "statusDescription": "11% EquipmentINT\n",
+    "statusDescription": "13% EquipmentINT\n",
     "connectedNodes": [
       66,
       67,
@@ -1997,7 +1997,7 @@
         "flat": 0.0,
         "mult": 1.0,
         "globalMult": 1.0,
-        "equipmentMult": 0.11,
+        "equipmentMult": 0.13,
         "passiveMult": 0.0
       }
     },
@@ -2244,7 +2244,7 @@
   {
     "id": 75,
     "name": "Glass Cannon",
-    "description": "ความเสียหายครึ่งหนึ่งที่ทำได้กลายเป็นความเสียหายโดยตรง, ความเสียหายทั้งหมดที่รับ กลายเป็นความเสียหายจริง",
+    "description": "ความเสียหายครึ่งหนึ่งที่ทำได้กลายเป็นความเสียหายโดยตรง, ความเสียหายทั้งหมดที่รับ กลายเป็นความเสียหายโดยตรง",
     "statusDescription": "",
     "connectedNodes": [
       64
@@ -3769,13 +3769,27 @@
     "id": 129,
     "name": "Slow But Steady",
     "description": "",
-    "statusDescription": "Set Speed to 1\n100% GlobalHP\n",
+    "statusDescription": "100% GlobalHP\n25% GlobalRATK\nSet Speed to 1\n25% GlobalMATK\n25% GlobalPATK\n",
     "connectedNodes": [
       134
     ],
-    "x": 1322.4225508915442,
+    "x": 1320.3317993102564,
     "y": 1061.6676579585949,
     "stats": {
+      "HEALTHPOINT": {
+        "flat": 0.0,
+        "mult": 1.0,
+        "globalMult": 2.0,
+        "equipmentMult": 0.0,
+        "passiveMult": 0.0
+      },
+      "RANGEDATTACK": {
+        "flat": 0.0,
+        "mult": 1.0,
+        "globalMult": 1.25,
+        "equipmentMult": 0.0,
+        "passiveMult": 0.0
+      },
       "SPEED": {
         "flat": 0.0,
         "mult": 1.0,
@@ -3784,10 +3798,17 @@
         "equipmentMult": 0.0,
         "passiveMult": 0.0
       },
-      "HEALTHPOINT": {
+      "MAGICALATTACK": {
         "flat": 0.0,
         "mult": 1.0,
-        "globalMult": 2.0,
+        "globalMult": 1.25,
+        "equipmentMult": 0.0,
+        "passiveMult": 0.0
+      },
+      "PHYSICALATTACK": {
+        "flat": 0.0,
+        "mult": 1.0,
+        "globalMult": 1.25,
         "equipmentMult": 0.0,
         "passiveMult": 0.0
       }
