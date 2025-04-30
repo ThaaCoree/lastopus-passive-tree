@@ -1320,7 +1320,7 @@
   {
     "id": 43,
     "name": "Intense Affection",
-    "description": "เมื่อได้รับบัพ ผลของบัพจะส่งผลเป็นสองเท่า",
+    "description": "เมื่อได้รับสถานะ ผลของบัพและดีบัพจะส่งผลเป็นสองเท่า",
     "statusDescription": "",
     "connectedNodes": [
       37
