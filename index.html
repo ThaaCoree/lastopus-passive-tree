@@ -38,6 +38,7 @@
         <p id="nodeName"></p>
         <p id="nodeStatusDes"></p>
         <p id="nodeDes">-</p>
+        <p id="nodeLore">-</p>
     </div>
 </div>
 
@@ -114,6 +115,7 @@ function updatePropertyPanel(node) {
     document.getElementById('nodeName').innerText = `${node ? node.name : ''}`;
     document.getElementById('nodeStatusDes').innerText = `${node ? node.statusDescription : ''}`;
     document.getElementById('nodeDes').innerText = `${node ? node.description : ''}`;
+    document.getElementById('nodeLore').innerText = `${node ? node.lore : ''}`;
 }
 
 function renderNodes() {
@@ -285,3 +287,4 @@ fetch('passives.json')
 
 </body>
 </html>
+
