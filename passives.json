@@ -1,4 +1,4 @@
-{
+[ {
   "1" : {
     "id" : 1,
     "name" : "First Light",
@@ -21789,3 +21789,4 @@
     "skillModifiers" : { }
   }
 }
+]
