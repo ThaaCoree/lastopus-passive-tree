@@ -163,7 +163,7 @@ canvas.addEventListener('click', (e) => {
         const dx = node.x - toReduceX - clickX;
         const dy = node.y - toReduceY - clickY;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance <= 100) {
+        if (distance <= 60) {
             selectedNode = node;
             break;
         }
@@ -291,5 +291,6 @@ fetch('passives.json')
 
 </body>
 </html>
+
 
 
