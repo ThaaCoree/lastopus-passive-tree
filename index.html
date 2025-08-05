@@ -27,6 +27,10 @@
         padding: 20px;
         box-sizing: border-box;
     }
+    #nodeLore {
+    font-size: 0.8em; /* เล็กกว่าปกติ */
+    color: gray;      /* สีเทา */
+    }
 </style>
 
 </head>
@@ -67,14 +71,14 @@ NOTABLE: new Image(),
 KEYSTONE: new Image()
 };
 
-images.SMALL.src = "/lastopus-passive-tree/images/small_node2.png";
-images.NOTABLE.src = "/lastopus-passive-tree/images/notable_node2.png";
-images.KEYSTONE.src = "/lastopus-passive-tree/images/keystone_node2.png";
+images.SMALL.src = "/lastopus-passive-tree/images/small_node3.png";
+images.NOTABLE.src = "/lastopus-passive-tree/images/notable_node3.png";
+images.KEYSTONE.src = "/lastopus-passive-tree/images/keystone_node3.png";
 
 const imageSizes = {
-SMALL: 80,
-NOTABLE: 100,
-KEYSTONE: 120
+SMALL: 60,
+NOTABLE: 80,
+KEYSTONE: 100
 };
 
 Promise.all([
@@ -287,4 +291,5 @@ fetch('passives.json')
 
 </body>
 </html>
+
 
