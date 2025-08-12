@@ -4,7 +4,7 @@
   "description" : "",
   "statusDescription" : "1 AGI\n1 STR\n1 VIT\n1 WIS\n1 DEX\n1 LUK\n1 INT\n",
   "lore" : "",
-  "connectedNodes" : [ 2, 3, 4, 5, 6, 7 ],
+  "connectedNodes" : [ ],
   "x" : 2956.1125516353804,
   "y" : 3194.839727835738,
   "modifiers" : {
@@ -73,8 +73,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 1.0,
@@ -160,8 +160,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 1.0,
@@ -199,8 +199,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 1.0,
@@ -238,8 +238,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "DEXTERITY" : {
       "flat" : 1.0,
@@ -277,8 +277,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "WISDOM" : {
       "flat" : 1.0,
@@ -316,8 +316,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "INTELLIGENCE" : {
       "flat" : 1.0,
@@ -355,8 +355,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "LUCK" : {
       "flat" : 1.0,
@@ -394,8 +394,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "INTELLIGENCE" : {
       "flat" : 1.0,
@@ -433,8 +433,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "INTELLIGENCE" : {
       "flat" : 1.0,
@@ -472,8 +472,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "INTELLIGENCE" : {
       "flat" : 1.0,
@@ -520,8 +520,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 12,
@@ -541,8 +541,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "KEYSTONE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 13,
@@ -581,6 +581,7 @@
   "equipmentSlotMult" : { },
   "nodeType" : "KEYSTONE",
   "statModifiers" : { },
+  "skillModifiers" : { },
   "transferModifiers" : {
     "1" : {
       "sourceStat" : null,
@@ -601,7 +602,6 @@
       "transferType" : "CONVERSION"
     }
   },
-  "skillModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 14,
@@ -621,8 +621,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "KEYSTONE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 15,
@@ -642,8 +642,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "KEYSTONE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 16,
@@ -668,13 +668,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "KEYSTONE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "HEALING" : {
       "flat" : 0.0,
       "mult" : 1.0
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 17,
@@ -703,7 +703,6 @@
   "equipmentSlotMult" : { },
   "nodeType" : "KEYSTONE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIRE" : {
       "flat" : 0.0,
@@ -714,6 +713,7 @@
       "mult" : -0.8
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 18,
@@ -815,8 +815,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 19,
@@ -836,8 +836,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "KEYSTONE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 20,
@@ -857,8 +857,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "KEYSTONE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 21,
@@ -896,8 +896,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 22,
@@ -917,8 +917,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "KEYSTONE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 23,
@@ -938,8 +938,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "KEYSTONE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 24,
@@ -959,8 +959,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "KEYSTONE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 25,
@@ -998,8 +998,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 26,
@@ -1037,8 +1037,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 27,
@@ -1085,8 +1085,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "VITALITY" : {
       "flat" : 0.0,
@@ -1149,8 +1149,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 29,
@@ -1204,8 +1204,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 30,
@@ -1259,8 +1259,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 31,
@@ -1298,8 +1298,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 32,
@@ -1337,8 +1337,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 33,
@@ -1376,8 +1376,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 34,
@@ -1415,8 +1415,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 35,
@@ -1454,8 +1454,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 36,
@@ -1493,8 +1493,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 37,
@@ -1532,8 +1532,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 38,
@@ -1562,8 +1562,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 0.0,
@@ -1601,8 +1601,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 0.0,
@@ -1640,8 +1640,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 0.0,
@@ -1688,8 +1688,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 42,
@@ -1727,8 +1727,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 43,
@@ -1766,8 +1766,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 44,
@@ -1805,8 +1805,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 45,
@@ -1860,8 +1860,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 46,
@@ -1915,8 +1915,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 47,
@@ -1970,8 +1970,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 48,
@@ -2009,8 +2009,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 49,
@@ -2048,8 +2048,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 50,
@@ -2087,8 +2087,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 51,
@@ -2126,8 +2126,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 52,
@@ -2181,8 +2181,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 53,
@@ -2236,8 +2236,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 54,
@@ -2275,8 +2275,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 55,
@@ -2314,8 +2314,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 56,
@@ -2362,8 +2362,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "WISDOM" : {
       "flat" : 0.0,
@@ -2419,8 +2419,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -2458,8 +2458,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -2497,8 +2497,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -2536,7 +2536,6 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIRE" : {
       "flat" : 0.0,
@@ -2547,6 +2546,7 @@
       "mult" : 0.1
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 61,
@@ -2575,7 +2575,6 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIRE" : {
       "flat" : 0.0,
@@ -2586,6 +2585,7 @@
       "mult" : 0.04
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 62,
@@ -2614,7 +2614,6 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIRE" : {
       "flat" : 0.0,
@@ -2625,6 +2624,7 @@
       "mult" : 0.04
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 63,
@@ -2662,8 +2662,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 64,
@@ -2701,8 +2701,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 65,
@@ -2727,13 +2727,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "EARTH" : {
       "flat" : 0.0,
       "mult" : 0.16
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 66,
@@ -2803,8 +2803,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 67,
@@ -2874,8 +2874,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 68,
@@ -2945,8 +2945,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 69,
@@ -2984,8 +2984,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 70,
@@ -3039,8 +3039,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 71,
@@ -3094,8 +3094,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 72,
@@ -3149,8 +3149,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 73,
@@ -3188,8 +3188,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 74,
@@ -3227,8 +3227,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 75,
@@ -3266,8 +3266,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 76,
@@ -3312,8 +3312,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -3383,8 +3383,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -3454,8 +3454,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -3533,8 +3533,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 0.0,
@@ -3620,8 +3620,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 0.0,
@@ -3707,8 +3707,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 0.0,
@@ -3818,8 +3818,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -3914,8 +3914,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 84,
@@ -3953,8 +3953,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 85,
@@ -3992,8 +3992,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 86,
@@ -4031,8 +4031,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 87,
@@ -4070,8 +4070,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 88,
@@ -4096,13 +4096,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "DARK" : {
       "flat" : 0.0,
       "mult" : 0.04
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 89,
@@ -4127,13 +4127,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "DARK" : {
       "flat" : 0.0,
       "mult" : 0.04
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 90,
@@ -4158,13 +4158,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "DARK" : {
       "flat" : 0.0,
       "mult" : 0.04
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 91,
@@ -4202,8 +4202,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 92,
@@ -4278,6 +4278,7 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
+  "skillModifiers" : { },
   "transferModifiers" : {
     "1" : {
       "sourceStat" : null,
@@ -4334,7 +4335,6 @@
       "transferType" : "GAIN"
     }
   },
-  "skillModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 93,
@@ -4372,8 +4372,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 94,
@@ -4411,8 +4411,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 95,
@@ -4450,8 +4450,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 96,
@@ -4489,8 +4489,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 97,
@@ -4528,8 +4528,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 98,
@@ -4567,8 +4567,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 99,
@@ -4606,8 +4606,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 100,
@@ -4637,6 +4637,7 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
+  "skillModifiers" : { },
   "transferModifiers" : {
     "1" : {
       "sourceStat" : "MANAREGEN",
@@ -4648,7 +4649,6 @@
       "transferType" : "CONVERSION"
     }
   },
-  "skillModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 101,
@@ -4673,13 +4673,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "WIND" : {
       "flat" : 0.0,
       "mult" : 0.16
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 102,
@@ -4704,13 +4704,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "WIND" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 103,
@@ -4735,19 +4735,19 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "WIND" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 104,
-  "name" : "Wind Amplification",
+  "name" : "Accuracy as Evasion",
   "description" : "",
-  "statusDescription" : "ตัวคูณสกิลประเภท Wind เพิ่มขึ้น 3%\n",
+  "statusDescription" : "Gain 4.5% of Accuracy as Extra Evasion\n",
   "lore" : "",
   "connectedNodes" : [ 106, 101, 103 ],
   "x" : 592.2457381846508,
@@ -4755,22 +4755,32 @@
   "modifiers" : {
     "statModifiers" : { },
     "statusModifiers" : { },
-    "transferModifiers" : { },
-    "skillModifiers" : {
-      "WIND" : {
-        "flat" : 0.0,
-        "mult" : 0.03
+    "transferModifiers" : {
+      "1" : {
+        "sourceStat" : "ACCURACY",
+        "targetStat" : "EVASION",
+        "sourceStatus" : null,
+        "targetStatus" : null,
+        "transferPercent" : 0.045,
+        "transferRatio" : 1.0,
+        "transferType" : "GAIN"
       }
-    }
+    },
+    "skillModifiers" : { }
   },
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
-  "skillModifiers" : {
-    "WIND" : {
-      "flat" : 0.0,
-      "mult" : 0.03
+  "skillModifiers" : { },
+  "transferModifiers" : {
+    "1" : {
+      "sourceStat" : "ACCURACY",
+      "targetStat" : "EVASION",
+      "sourceStatus" : null,
+      "targetStatus" : null,
+      "transferPercent" : 0.045,
+      "transferRatio" : 1.0,
+      "transferType" : "GAIN"
     }
   },
   "statusModifiers" : { }
@@ -4802,6 +4812,7 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
+  "skillModifiers" : { },
   "transferModifiers" : {
     "1" : {
       "sourceStat" : "ACCURACY",
@@ -4813,13 +4824,12 @@
       "transferType" : "GAIN"
     }
   },
-  "skillModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 106,
   "name" : "Accuracy as Evasion",
   "description" : "",
-  "statusDescription" : "Gain 2.5% of Accuracy as Extra Evasion\n",
+  "statusDescription" : "Gain 4.5% of Accuracy as Extra Evasion\n",
   "lore" : "",
   "connectedNodes" : [ 107, 100, 104 ],
   "x" : 705.2652011185053,
@@ -4833,7 +4843,7 @@
         "targetStat" : "EVASION",
         "sourceStatus" : null,
         "targetStatus" : null,
-        "transferPercent" : 0.025,
+        "transferPercent" : 0.045,
         "transferRatio" : 1.0,
         "transferType" : "GAIN"
       }
@@ -4843,24 +4853,24 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
+  "skillModifiers" : { },
   "transferModifiers" : {
     "1" : {
       "sourceStat" : "ACCURACY",
       "targetStat" : "EVASION",
       "sourceStatus" : null,
       "targetStatus" : null,
-      "transferPercent" : 0.025,
+      "transferPercent" : 0.045,
       "transferRatio" : 1.0,
       "transferType" : "GAIN"
     }
   },
-  "skillModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 107,
   "name" : "Accuracy as Evasion",
   "description" : "",
-  "statusDescription" : "Gain 2.5% of Accuracy as Extra Evasion\n",
+  "statusDescription" : "Gain 4.5% of Accuracy as Extra Evasion\n",
   "lore" : "",
   "connectedNodes" : [ 105, 106 ],
   "x" : 1011.6526801646397,
@@ -4874,7 +4884,7 @@
         "targetStat" : "EVASION",
         "sourceStatus" : null,
         "targetStatus" : null,
-        "transferPercent" : 0.025,
+        "transferPercent" : 0.045,
         "transferRatio" : 1.0,
         "transferType" : "GAIN"
       }
@@ -4884,18 +4894,18 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
+  "skillModifiers" : { },
   "transferModifiers" : {
     "1" : {
       "sourceStat" : "ACCURACY",
       "targetStat" : "EVASION",
       "sourceStatus" : null,
       "targetStatus" : null,
-      "transferPercent" : 0.025,
+      "transferPercent" : 0.045,
       "transferRatio" : 1.0,
       "transferType" : "GAIN"
     }
   },
-  "skillModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 108,
@@ -4924,8 +4934,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "DEXTERITY" : {
       "flat" : 0.0,
@@ -4963,8 +4973,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "DEXTERITY" : {
       "flat" : 0.0,
@@ -5002,8 +5012,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "DEXTERITY" : {
       "flat" : 0.0,
@@ -5034,8 +5044,8 @@
   },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 112,
@@ -5057,8 +5067,8 @@
   },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 113,
@@ -5080,8 +5090,8 @@
   },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 114,
@@ -5103,8 +5113,8 @@
   },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 115,
@@ -5126,8 +5136,8 @@
   },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 116,
@@ -5149,8 +5159,8 @@
   },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 117,
@@ -5172,8 +5182,8 @@
   },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 118,
@@ -5195,8 +5205,8 @@
   },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 119,
@@ -5218,8 +5228,8 @@
   },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 120,
@@ -5246,8 +5256,8 @@
   },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 121,
@@ -5272,13 +5282,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "WATER" : {
       "flat" : 0.0,
       "mult" : 0.04
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 122,
@@ -5303,13 +5313,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "WATER" : {
       "flat" : 0.0,
       "mult" : 0.04
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 123,
@@ -5334,13 +5344,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "WATER" : {
       "flat" : 0.0,
       "mult" : 0.04
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 124,
@@ -5378,8 +5388,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 125,
@@ -5417,8 +5427,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 126,
@@ -5456,8 +5466,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 127,
@@ -5495,8 +5505,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 128,
@@ -5525,8 +5535,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "INTELLIGENCE" : {
       "flat" : 0.0,
@@ -5564,8 +5574,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "INTELLIGENCE" : {
       "flat" : 0.0,
@@ -5603,8 +5613,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "INTELLIGENCE" : {
       "flat" : 0.0,
@@ -5651,8 +5661,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 132,
@@ -5681,8 +5691,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "LUCK" : {
       "flat" : 0.0,
@@ -5720,8 +5730,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "LUCK" : {
       "flat" : 0.0,
@@ -5759,8 +5769,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "LUCK" : {
       "flat" : 0.0,
@@ -5807,8 +5817,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 136,
@@ -5846,8 +5856,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 137,
@@ -5885,8 +5895,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 138,
@@ -5940,8 +5950,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 139,
@@ -5995,8 +6005,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 140,
@@ -6050,8 +6060,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 141,
@@ -6089,8 +6099,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 142,
@@ -6128,8 +6138,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 143,
@@ -6167,8 +6177,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 144,
@@ -6206,8 +6216,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 145,
@@ -6236,7 +6246,6 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "PHYSICAL" : {
       "flat" : 0.0,
@@ -6247,6 +6256,7 @@
       "mult" : 0.09
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 146,
@@ -6271,13 +6281,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "DRAWBACK" : {
       "flat" : 0.0,
       "mult" : -0.1
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 147,
@@ -6306,8 +6316,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "WISDOM" : {
       "flat" : 1.0,
@@ -6345,8 +6355,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "WISDOM" : {
       "flat" : 1.0,
@@ -6384,8 +6394,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "WISDOM" : {
       "flat" : 1.0,
@@ -6423,8 +6433,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "LUCK" : {
       "flat" : 1.0,
@@ -6462,8 +6472,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "LUCK" : {
       "flat" : 1.0,
@@ -6501,8 +6511,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "LUCK" : {
       "flat" : 1.0,
@@ -6540,8 +6550,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 1.0,
@@ -6579,8 +6589,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 1.0,
@@ -6618,8 +6628,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 1.0,
@@ -6657,8 +6667,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "DEXTERITY" : {
       "flat" : 1.0,
@@ -6696,8 +6706,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "DEXTERITY" : {
       "flat" : 1.0,
@@ -6735,8 +6745,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "DEXTERITY" : {
       "flat" : 1.0,
@@ -6774,8 +6784,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 1.0,
@@ -6813,8 +6823,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 1.0,
@@ -6852,8 +6862,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 1.0,
@@ -6891,8 +6901,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 1.0,
@@ -6930,8 +6940,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 1.0,
@@ -6969,8 +6979,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 1.0,
@@ -7008,8 +7018,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "LUCK" : {
       "flat" : 1.0,
@@ -7047,8 +7057,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "DEXTERITY" : {
       "flat" : 1.0,
@@ -7086,8 +7096,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "DEXTERITY" : {
       "flat" : 1.0,
@@ -7125,8 +7135,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "LUCK" : {
       "flat" : 1.0,
@@ -7164,8 +7174,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "INTELLIGENCE" : {
       "flat" : 1.0,
@@ -7203,8 +7213,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "INTELLIGENCE" : {
       "flat" : 1.0,
@@ -7242,8 +7252,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 1.0,
@@ -7281,8 +7291,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "WISDOM" : {
       "flat" : 1.0,
@@ -7320,8 +7330,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "WISDOM" : {
       "flat" : 1.0,
@@ -7375,8 +7385,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 1.0,
@@ -7446,8 +7456,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 1.0,
@@ -7501,8 +7511,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "INTELLIGENCE" : {
       "flat" : 1.0,
@@ -7540,8 +7550,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "INTELLIGENCE" : {
       "flat" : 1.0,
@@ -7579,8 +7589,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "LUCK" : {
       "flat" : 1.0,
@@ -7618,8 +7628,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "LUCK" : {
       "flat" : 1.0,
@@ -7657,8 +7667,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "VITALITY" : {
       "flat" : 1.0,
@@ -7696,8 +7706,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "VITALITY" : {
       "flat" : 1.0,
@@ -7735,8 +7745,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 1.0,
@@ -7774,8 +7784,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 1.0,
@@ -7813,8 +7823,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "VITALITY" : {
       "flat" : 1.0,
@@ -7852,8 +7862,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "VITALITY" : {
       "flat" : 1.0,
@@ -7891,8 +7901,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "WISDOM" : {
       "flat" : 1.0,
@@ -7930,8 +7940,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "WISDOM" : {
       "flat" : 1.0,
@@ -7969,8 +7979,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 1.0,
@@ -8008,8 +8018,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 1.0,
@@ -8047,8 +8057,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "DEXTERITY" : {
       "flat" : 1.0,
@@ -8086,8 +8096,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "DEXTERITY" : {
       "flat" : 1.0,
@@ -8125,8 +8135,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "VITALITY" : {
       "flat" : 1.0,
@@ -8164,8 +8174,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "VITALITY" : {
       "flat" : 1.0,
@@ -8203,8 +8213,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "VITALITY" : {
       "flat" : 1.0,
@@ -8242,8 +8252,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "VITALITY" : {
       "flat" : 1.0,
@@ -8290,8 +8300,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 197,
@@ -8329,8 +8339,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 198,
@@ -8368,8 +8378,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 199,
@@ -8407,8 +8417,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 200,
@@ -8438,6 +8448,7 @@
   "equipmentSlotMult" : { },
   "nodeType" : "KEYSTONE",
   "statModifiers" : { },
+  "skillModifiers" : { },
   "transferModifiers" : {
     "1" : {
       "sourceStat" : null,
@@ -8449,7 +8460,6 @@
       "transferType" : "CONVERSION"
     }
   },
-  "skillModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 201,
@@ -8469,8 +8479,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "KEYSTONE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 202,
@@ -8508,8 +8518,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 203,
@@ -8547,8 +8557,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 204,
@@ -8586,8 +8596,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 205,
@@ -8625,8 +8635,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 206,
@@ -8664,8 +8674,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 207,
@@ -8703,8 +8713,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 208,
@@ -8742,8 +8752,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 209,
@@ -8772,8 +8782,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "WISDOM" : {
       "flat" : 2.0,
@@ -8820,8 +8830,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 211,
@@ -8850,8 +8860,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "LUCK" : {
       "flat" : 0.0,
@@ -8889,8 +8899,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "LUCK" : {
       "flat" : 0.0,
@@ -8928,8 +8938,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "LUCK" : {
       "flat" : 0.0,
@@ -8976,8 +8986,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 215,
@@ -9015,8 +9025,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 216,
@@ -9054,8 +9064,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 217,
@@ -9093,8 +9103,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 218,
@@ -9132,8 +9142,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 219,
@@ -9171,8 +9181,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 220,
@@ -9210,8 +9220,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 221,
@@ -9249,8 +9259,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 222,
@@ -9304,8 +9314,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 223,
@@ -9325,8 +9335,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "KEYSTONE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 224,
@@ -9364,8 +9374,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 225,
@@ -9403,8 +9413,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 226,
@@ -9442,8 +9452,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 227,
@@ -9497,8 +9507,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 228,
@@ -9552,8 +9562,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 229,
@@ -9607,8 +9617,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 230,
@@ -9630,8 +9640,8 @@
   },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 231,
@@ -9653,8 +9663,8 @@
   },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 232,
@@ -9679,13 +9689,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "STRIKE" : {
       "flat" : 0.0,
       "mult" : 0.12
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 233,
@@ -9739,8 +9749,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 234,
@@ -9794,8 +9804,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 235,
@@ -9849,8 +9859,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 236,
@@ -9920,8 +9930,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 237,
@@ -9946,13 +9956,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "WATER" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 238,
@@ -9977,13 +9987,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "WATER" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 239,
@@ -10008,13 +10018,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "WATER" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 240,
@@ -10039,13 +10049,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "WATER" : {
       "flat" : 0.0,
       "mult" : 0.11
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 241,
@@ -10070,13 +10080,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "LIMIT" : {
       "flat" : 1.0,
       "mult" : 0.0
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 242,
@@ -10101,13 +10111,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "DISTANCE" : {
       "flat" : 0.0,
       "mult" : 0.13
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 243,
@@ -10132,13 +10142,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "DISTANCE" : {
       "flat" : 0.0,
       "mult" : 0.025
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 244,
@@ -10163,13 +10173,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "DISTANCE" : {
       "flat" : 0.0,
       "mult" : 0.025
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 245,
@@ -10194,13 +10204,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "DISTANCE" : {
       "flat" : 0.0,
       "mult" : 0.025
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 246,
@@ -10238,8 +10248,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 247,
@@ -10277,8 +10287,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 248,
@@ -10316,8 +10326,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 249,
@@ -10355,8 +10365,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 250,
@@ -10394,8 +10404,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 251,
@@ -10433,8 +10443,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 252,
@@ -10472,8 +10482,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 253,
@@ -10511,8 +10521,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 254,
@@ -10550,8 +10560,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 255,
@@ -10589,8 +10599,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 256,
@@ -10628,8 +10638,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 257,
@@ -10667,8 +10677,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 258,
@@ -10706,8 +10716,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 259,
@@ -10761,8 +10771,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 260,
@@ -10800,8 +10810,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 261,
@@ -10839,8 +10849,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 262,
@@ -10878,8 +10888,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 263,
@@ -10917,8 +10927,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 264,
@@ -10956,8 +10966,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 265,
@@ -10982,13 +10992,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "EARTH" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 266,
@@ -11013,13 +11023,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "EARTH" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 267,
@@ -11044,13 +11054,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "EARTH" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 268,
@@ -11075,13 +11085,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "EARTH" : {
       "flat" : 0.0,
       "mult" : 0.11
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 269,
@@ -11119,8 +11129,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 270,
@@ -11158,8 +11168,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 271,
@@ -11197,8 +11207,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 272,
@@ -11236,8 +11246,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 273,
@@ -11262,13 +11272,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "STRIKE" : {
       "flat" : 0.0,
       "mult" : 0.04
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 274,
@@ -11297,8 +11307,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "WISDOM" : {
       "flat" : 0.0,
@@ -11332,13 +11342,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "HEALING" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 276,
@@ -11363,13 +11373,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "HEALING" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 277,
@@ -11394,13 +11404,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "BUFF" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 278,
@@ -11425,13 +11435,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "BUFF" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 279,
@@ -11456,13 +11466,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "HEALING" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 280,
@@ -11487,13 +11497,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "BUFF" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 281,
@@ -11522,8 +11532,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "WISDOM" : {
       "flat" : 0.0,
@@ -11557,13 +11567,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "WIND" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 283,
@@ -11588,13 +11598,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "WIND" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 284,
@@ -11619,13 +11629,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "WIND" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 285,
@@ -11650,13 +11660,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "WIND" : {
       "flat" : 0.0,
       "mult" : 0.11
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 286,
@@ -11694,8 +11704,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 287,
@@ -11733,8 +11743,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 288,
@@ -11772,8 +11782,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 289,
@@ -11827,8 +11837,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 290,
@@ -11882,8 +11892,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 291,
@@ -11937,8 +11947,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 292,
@@ -11992,8 +12002,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 293,
@@ -12047,8 +12057,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 294,
@@ -12102,8 +12112,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 295,
@@ -12157,8 +12167,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 296,
@@ -12212,14 +12222,14 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 297,
   "name" : "Sharp Eye",
   "description" : "",
-  "statusDescription" : "20% GlobalAccuracy\n",
+  "statusDescription" : "25% GlobalAccuracy\n",
   "lore" : "",
   "connectedNodes" : [ 294, 293 ],
   "x" : 3448.0930504186535,
@@ -12230,7 +12240,7 @@
         "flat" : 0.0,
         "mult" : 0.0,
         "override" : "NaN",
-        "globalMult" : 0.2,
+        "globalMult" : 0.25,
         "equipmentMult" : 0.0,
         "passiveMult" : 0.0
       }
@@ -12246,13 +12256,13 @@
       "flat" : 0.0,
       "mult" : 0.0,
       "override" : "NaN",
-      "globalMult" : 0.2,
+      "globalMult" : 0.25,
       "equipmentMult" : 0.0,
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 298,
@@ -12322,8 +12332,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 299,
@@ -12361,8 +12371,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 300,
@@ -12400,8 +12410,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 301,
@@ -12439,8 +12449,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 302,
@@ -12478,8 +12488,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 303,
@@ -12517,8 +12527,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 304,
@@ -12548,6 +12558,7 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
+  "skillModifiers" : { },
   "transferModifiers" : {
     "1" : {
       "sourceStat" : "DEBUFFAMPLIFIER",
@@ -12559,7 +12570,6 @@
       "transferType" : "CONVERSION"
     }
   },
-  "skillModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 305,
@@ -12613,8 +12623,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 306,
@@ -12668,8 +12678,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 307,
@@ -12723,8 +12733,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 308,
@@ -12778,8 +12788,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 309,
@@ -12833,8 +12843,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 310,
@@ -12888,8 +12898,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 311,
@@ -12943,8 +12953,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 312,
@@ -12998,8 +13008,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 313,
@@ -13053,8 +13063,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 314,
@@ -13108,8 +13118,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 315,
@@ -13163,8 +13173,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 316,
@@ -13218,8 +13228,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 317,
@@ -13273,8 +13283,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 318,
@@ -13312,8 +13322,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 319,
@@ -13351,8 +13361,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 320,
@@ -13390,8 +13400,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 321,
@@ -13429,8 +13439,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 322,
@@ -13468,8 +13478,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 323,
@@ -13499,6 +13509,7 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
+  "skillModifiers" : { },
   "transferModifiers" : {
     "1" : {
       "sourceStat" : "ACCURACY",
@@ -13510,7 +13521,6 @@
       "transferType" : "GAIN"
     }
   },
-  "skillModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 324,
@@ -13540,6 +13550,7 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
+  "skillModifiers" : { },
   "transferModifiers" : {
     "1" : {
       "sourceStat" : "ACCURACY",
@@ -13551,7 +13562,6 @@
       "transferType" : "GAIN"
     }
   },
-  "skillModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 325,
@@ -13576,13 +13586,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIRE" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 326,
@@ -13607,13 +13617,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIRE" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 327,
@@ -13638,13 +13648,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIRE" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 328,
@@ -13669,13 +13679,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIRE" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 329,
@@ -13700,13 +13710,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIRE" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 330,
@@ -13731,13 +13741,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIRE" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 331,
@@ -13762,13 +13772,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIRE" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 332,
@@ -13793,13 +13803,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIRE" : {
       "flat" : 0.0,
       "mult" : 0.1
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 333,
@@ -13876,8 +13886,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -14011,8 +14021,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -14146,8 +14156,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -14281,8 +14291,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -14416,8 +14426,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -14551,8 +14561,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -14615,7 +14625,7 @@
   "id" : 339,
   "name" : "Reservation Increase",
   "description" : "",
-  "statusDescription" : "5% Reservation\n",
+  "statusDescription" : "6% Reservation\n",
   "lore" : "",
   "connectedNodes" : [ 342, 241 ],
   "x" : 3126.3360150547405,
@@ -14623,7 +14633,7 @@
   "modifiers" : {
     "statModifiers" : {
       "RESERVATION" : {
-        "flat" : 0.05,
+        "flat" : 0.06,
         "mult" : 0.0,
         "override" : "NaN",
         "globalMult" : 0.0,
@@ -14639,7 +14649,7 @@
   "nodeType" : "SMALL",
   "statModifiers" : {
     "RESERVATION" : {
-      "flat" : 0.05,
+      "flat" : 0.06,
       "mult" : 0.0,
       "override" : "NaN",
       "globalMult" : 0.0,
@@ -14647,14 +14657,14 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 340,
   "name" : "Reservation Increase",
   "description" : "",
-  "statusDescription" : "5% Reservation\n",
+  "statusDescription" : "6% Reservation\n",
   "lore" : "",
   "connectedNodes" : [ 343, 341 ],
   "x" : 3038.7737681805525,
@@ -14662,7 +14672,7 @@
   "modifiers" : {
     "statModifiers" : {
       "RESERVATION" : {
-        "flat" : 0.05,
+        "flat" : 0.06,
         "mult" : 0.0,
         "override" : "NaN",
         "globalMult" : 0.0,
@@ -14678,7 +14688,7 @@
   "nodeType" : "SMALL",
   "statModifiers" : {
     "RESERVATION" : {
-      "flat" : 0.05,
+      "flat" : 0.06,
       "mult" : 0.0,
       "override" : "NaN",
       "globalMult" : 0.0,
@@ -14686,14 +14696,14 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 341,
   "name" : "Reservation Increase",
   "description" : "",
-  "statusDescription" : "5% Reservation\n",
+  "statusDescription" : "6% Reservation\n",
   "lore" : "",
   "connectedNodes" : [ 340, 342 ],
   "x" : 2872.131459300764,
@@ -14701,7 +14711,7 @@
   "modifiers" : {
     "statModifiers" : {
       "RESERVATION" : {
-        "flat" : 0.05,
+        "flat" : 0.06,
         "mult" : 0.0,
         "override" : "NaN",
         "globalMult" : 0.0,
@@ -14717,7 +14727,7 @@
   "nodeType" : "SMALL",
   "statModifiers" : {
     "RESERVATION" : {
-      "flat" : 0.05,
+      "flat" : 0.06,
       "mult" : 0.0,
       "override" : "NaN",
       "globalMult" : 0.0,
@@ -14725,14 +14735,14 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 342,
   "name" : "Reservation Increase",
   "description" : "",
-  "statusDescription" : "5% Reservation\n",
+  "statusDescription" : "6% Reservation\n",
   "lore" : "",
   "connectedNodes" : [ 341, 339 ],
   "x" : 2988.6636298799735,
@@ -14740,7 +14750,7 @@
   "modifiers" : {
     "statModifiers" : {
       "RESERVATION" : {
-        "flat" : 0.05,
+        "flat" : 0.06,
         "mult" : 0.0,
         "override" : "NaN",
         "globalMult" : 0.0,
@@ -14756,7 +14766,7 @@
   "nodeType" : "SMALL",
   "statModifiers" : {
     "RESERVATION" : {
-      "flat" : 0.05,
+      "flat" : 0.06,
       "mult" : 0.0,
       "override" : "NaN",
       "globalMult" : 0.0,
@@ -14764,14 +14774,14 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 343,
   "name" : "Reservation Increase",
   "description" : "",
-  "statusDescription" : "5% Reservation\n",
+  "statusDescription" : "6% Reservation\n",
   "lore" : "",
   "connectedNodes" : [ 175, 340 ],
   "x" : 2930.769044281877,
@@ -14779,7 +14789,7 @@
   "modifiers" : {
     "statModifiers" : {
       "RESERVATION" : {
-        "flat" : 0.05,
+        "flat" : 0.06,
         "mult" : 0.0,
         "override" : "NaN",
         "globalMult" : 0.0,
@@ -14795,7 +14805,7 @@
   "nodeType" : "SMALL",
   "statModifiers" : {
     "RESERVATION" : {
-      "flat" : 0.05,
+      "flat" : 0.06,
       "mult" : 0.0,
       "override" : "NaN",
       "globalMult" : 0.0,
@@ -14803,8 +14813,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 344,
@@ -14874,8 +14884,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 345,
@@ -14945,8 +14955,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 346,
@@ -15016,8 +15026,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 347,
@@ -15087,8 +15097,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 348,
@@ -15108,8 +15118,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "KEYSTONE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 349,
@@ -15131,8 +15141,8 @@
   },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 350,
@@ -15154,8 +15164,8 @@
   },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 351,
@@ -15177,8 +15187,8 @@
   },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 352,
@@ -15216,8 +15226,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 353,
@@ -15287,8 +15297,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 354,
@@ -15358,8 +15368,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 355,
@@ -15429,8 +15439,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 356,
@@ -15500,8 +15510,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 357,
@@ -15544,13 +15554,13 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "DURATION" : {
       "flat" : 1.0,
       "mult" : 0.0
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 358,
@@ -15579,8 +15589,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -15618,8 +15628,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -15657,8 +15667,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -15687,8 +15697,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "KEYSTONE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 362,
@@ -15713,13 +15723,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "EARTH" : {
       "flat" : 0.0,
       "mult" : 0.04
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 363,
@@ -15744,13 +15754,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "WATER" : {
       "flat" : 0.0,
       "mult" : 0.04
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 364,
@@ -15775,13 +15785,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "WIND" : {
       "flat" : 0.0,
       "mult" : 0.04
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 365,
@@ -15806,13 +15816,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIRE" : {
       "flat" : 0.0,
       "mult" : 0.04
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 366,
@@ -15837,13 +15847,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "LIGHT" : {
       "flat" : 0.0,
       "mult" : 0.04
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 367,
@@ -15868,13 +15878,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "DARK" : {
       "flat" : 0.0,
       "mult" : 0.04
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 368,
@@ -15919,7 +15929,6 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "EARTH" : {
       "flat" : 0.0,
@@ -15946,6 +15955,7 @@
       "mult" : 0.08
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 369,
@@ -15970,13 +15980,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "SPELL" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 370,
@@ -16001,13 +16011,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "SPELL" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 371,
@@ -16032,13 +16042,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "SPELL" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 372,
@@ -16063,13 +16073,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "SPELL" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 373,
@@ -16094,13 +16104,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "SPELL" : {
       "flat" : 0.0,
       "mult" : 0.07
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 374,
@@ -16129,8 +16139,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "INTELLIGENCE" : {
       "flat" : 0.0,
@@ -16168,8 +16178,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "DEXTERITY" : {
       "flat" : 0.0,
@@ -16207,8 +16217,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "DEXTERITY" : {
       "flat" : 0.0,
@@ -16246,8 +16256,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "DEXTERITY" : {
       "flat" : 0.0,
@@ -16285,8 +16295,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "INTELLIGENCE" : {
       "flat" : 0.0,
@@ -16324,8 +16334,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "INTELLIGENCE" : {
       "flat" : 0.0,
@@ -16363,8 +16373,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 0.0,
@@ -16402,8 +16412,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 0.0,
@@ -16441,8 +16451,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 0.0,
@@ -16489,8 +16499,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 384,
@@ -16528,8 +16538,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 385,
@@ -16567,8 +16577,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 386,
@@ -16606,8 +16616,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 387,
@@ -16632,13 +16642,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "PHYSICAL" : {
       "flat" : 0.0,
       "mult" : 0.07
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 388,
@@ -16663,13 +16673,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "PHYSICAL" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 389,
@@ -16694,13 +16704,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "PHYSICAL" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 390,
@@ -16725,13 +16735,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "PHYSICAL" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 391,
@@ -16756,13 +16766,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "PHYSICAL" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 392,
@@ -16800,8 +16810,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 393,
@@ -16839,8 +16849,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 394,
@@ -16878,8 +16888,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 395,
@@ -16917,8 +16927,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 396,
@@ -16956,8 +16966,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 397,
@@ -16995,8 +17005,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 398,
@@ -17034,8 +17044,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 399,
@@ -17073,8 +17083,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 400,
@@ -17112,8 +17122,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 401,
@@ -17151,8 +17161,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 402,
@@ -17190,8 +17200,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 403,
@@ -17229,8 +17239,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 404,
@@ -17268,8 +17278,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 405,
@@ -17307,8 +17317,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 406,
@@ -17346,8 +17356,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 407,
@@ -17385,8 +17395,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 408,
@@ -17411,13 +17421,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "ELEMENTAL" : {
       "flat" : 0.0,
       "mult" : 0.1
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 409,
@@ -17442,13 +17452,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "ELEMENTAL" : {
       "flat" : 0.0,
       "mult" : 0.015
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 410,
@@ -17473,13 +17483,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "ELEMENTAL" : {
       "flat" : 0.0,
       "mult" : 0.015
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 411,
@@ -17504,13 +17514,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "ELEMENTAL" : {
       "flat" : 0.0,
       "mult" : 0.015
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 412,
@@ -17535,13 +17545,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "ELEMENTAL" : {
       "flat" : 0.0,
       "mult" : 0.015
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 413,
@@ -17566,13 +17576,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "ELEMENTAL" : {
       "flat" : 0.0,
       "mult" : 0.015
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 414,
@@ -17597,13 +17607,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "ELEMENTAL" : {
       "flat" : 0.0,
       "mult" : 0.015
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 415,
@@ -17641,8 +17651,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 416,
@@ -17680,8 +17690,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 417,
@@ -17719,8 +17729,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 418,
@@ -17758,8 +17768,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 419,
@@ -17797,8 +17807,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 420,
@@ -17836,8 +17846,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 421,
@@ -17875,14 +17885,14 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 422,
   "name" : "Defense",
   "description" : "",
-  "statusDescription" : "1% GlobalPDEF\n1% GlobalMDEF\n",
+  "statusDescription" : "2% GlobalPDEF\n2% GlobalMDEF\n",
   "lore" : "",
   "connectedNodes" : [ 427, 429 ],
   "x" : 2497.741648534835,
@@ -17893,7 +17903,7 @@
         "flat" : 0.0,
         "mult" : 0.0,
         "override" : "NaN",
-        "globalMult" : 0.01,
+        "globalMult" : 0.02,
         "equipmentMult" : 0.0,
         "passiveMult" : 0.0
       },
@@ -17901,7 +17911,7 @@
         "flat" : 0.0,
         "mult" : 0.0,
         "override" : "NaN",
-        "globalMult" : 0.01,
+        "globalMult" : 0.02,
         "equipmentMult" : 0.0,
         "passiveMult" : 0.0
       }
@@ -17917,7 +17927,7 @@
       "flat" : 0.0,
       "mult" : 0.0,
       "override" : "NaN",
-      "globalMult" : 0.01,
+      "globalMult" : 0.02,
       "equipmentMult" : 0.0,
       "passiveMult" : 0.0
     },
@@ -17925,19 +17935,19 @@
       "flat" : 0.0,
       "mult" : 0.0,
       "override" : "NaN",
-      "globalMult" : 0.01,
+      "globalMult" : 0.02,
       "equipmentMult" : 0.0,
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 423,
   "name" : "Defense",
   "description" : "",
-  "statusDescription" : "1% GlobalPDEF\n1% GlobalMDEF\n",
+  "statusDescription" : "2% GlobalPDEF\n2% GlobalMDEF\n",
   "lore" : "",
   "connectedNodes" : [ 424, 425 ],
   "x" : 2576.192182227268,
@@ -17948,7 +17958,7 @@
         "flat" : 0.0,
         "mult" : 0.0,
         "override" : "NaN",
-        "globalMult" : 0.01,
+        "globalMult" : 0.02,
         "equipmentMult" : 0.0,
         "passiveMult" : 0.0
       },
@@ -17956,7 +17966,7 @@
         "flat" : 0.0,
         "mult" : 0.0,
         "override" : "NaN",
-        "globalMult" : 0.01,
+        "globalMult" : 0.02,
         "equipmentMult" : 0.0,
         "passiveMult" : 0.0
       }
@@ -17972,7 +17982,7 @@
       "flat" : 0.0,
       "mult" : 0.0,
       "override" : "NaN",
-      "globalMult" : 0.01,
+      "globalMult" : 0.02,
       "equipmentMult" : 0.0,
       "passiveMult" : 0.0
     },
@@ -17980,19 +17990,19 @@
       "flat" : 0.0,
       "mult" : 0.0,
       "override" : "NaN",
-      "globalMult" : 0.01,
+      "globalMult" : 0.02,
       "equipmentMult" : 0.0,
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 424,
   "name" : "Defense",
   "description" : "",
-  "statusDescription" : "1% GlobalPDEF\n1% GlobalMDEF\n",
+  "statusDescription" : "2% GlobalPDEF\n2% GlobalMDEF\n",
   "lore" : "",
   "connectedNodes" : [ 423, 429 ],
   "x" : 2420.577189165229,
@@ -18003,7 +18013,7 @@
         "flat" : 0.0,
         "mult" : 0.0,
         "override" : "NaN",
-        "globalMult" : 0.01,
+        "globalMult" : 0.02,
         "equipmentMult" : 0.0,
         "passiveMult" : 0.0
       },
@@ -18011,7 +18021,7 @@
         "flat" : 0.0,
         "mult" : 0.0,
         "override" : "NaN",
-        "globalMult" : 0.01,
+        "globalMult" : 0.02,
         "equipmentMult" : 0.0,
         "passiveMult" : 0.0
       }
@@ -18027,7 +18037,7 @@
       "flat" : 0.0,
       "mult" : 0.0,
       "override" : "NaN",
-      "globalMult" : 0.01,
+      "globalMult" : 0.02,
       "equipmentMult" : 0.0,
       "passiveMult" : 0.0
     },
@@ -18035,19 +18045,19 @@
       "flat" : 0.0,
       "mult" : 0.0,
       "override" : "NaN",
-      "globalMult" : 0.01,
+      "globalMult" : 0.02,
       "equipmentMult" : 0.0,
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 425,
   "name" : "Defense",
   "description" : "",
-  "statusDescription" : "1% GlobalPDEF\n1% GlobalMDEF\n",
+  "statusDescription" : "2% GlobalPDEF\n2% GlobalMDEF\n",
   "lore" : "",
   "connectedNodes" : [ 423, 428 ],
   "x" : 2479.736608015259,
@@ -18058,7 +18068,7 @@
         "flat" : 0.0,
         "mult" : 0.0,
         "override" : "NaN",
-        "globalMult" : 0.01,
+        "globalMult" : 0.02,
         "equipmentMult" : 0.0,
         "passiveMult" : 0.0
       },
@@ -18066,7 +18076,7 @@
         "flat" : 0.0,
         "mult" : 0.0,
         "override" : "NaN",
-        "globalMult" : 0.01,
+        "globalMult" : 0.02,
         "equipmentMult" : 0.0,
         "passiveMult" : 0.0
       }
@@ -18082,7 +18092,7 @@
       "flat" : 0.0,
       "mult" : 0.0,
       "override" : "NaN",
-      "globalMult" : 0.01,
+      "globalMult" : 0.02,
       "equipmentMult" : 0.0,
       "passiveMult" : 0.0
     },
@@ -18090,19 +18100,19 @@
       "flat" : 0.0,
       "mult" : 0.0,
       "override" : "NaN",
-      "globalMult" : 0.01,
+      "globalMult" : 0.02,
       "equipmentMult" : 0.0,
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 426,
   "name" : "Defense",
   "description" : "",
-  "statusDescription" : "1% GlobalPDEF\n1% GlobalMDEF\n",
+  "statusDescription" : "2% GlobalPDEF\n2% GlobalMDEF\n",
   "lore" : "",
   "connectedNodes" : [ 224, 427 ],
   "x" : 2284.253310945591,
@@ -18113,7 +18123,7 @@
         "flat" : 0.0,
         "mult" : 0.0,
         "override" : "NaN",
-        "globalMult" : 0.01,
+        "globalMult" : 0.02,
         "equipmentMult" : 0.0,
         "passiveMult" : 0.0
       },
@@ -18121,7 +18131,7 @@
         "flat" : 0.0,
         "mult" : 0.0,
         "override" : "NaN",
-        "globalMult" : 0.01,
+        "globalMult" : 0.02,
         "equipmentMult" : 0.0,
         "passiveMult" : 0.0
       }
@@ -18137,7 +18147,7 @@
       "flat" : 0.0,
       "mult" : 0.0,
       "override" : "NaN",
-      "globalMult" : 0.01,
+      "globalMult" : 0.02,
       "equipmentMult" : 0.0,
       "passiveMult" : 0.0
     },
@@ -18145,19 +18155,19 @@
       "flat" : 0.0,
       "mult" : 0.0,
       "override" : "NaN",
-      "globalMult" : 0.01,
+      "globalMult" : 0.02,
       "equipmentMult" : 0.0,
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 427,
   "name" : "Defense",
   "description" : "",
-  "statusDescription" : "1% GlobalPDEF\n1% GlobalMDEF\n",
+  "statusDescription" : "2% GlobalPDEF\n2% GlobalMDEF\n",
   "lore" : "",
   "connectedNodes" : [ 426, 422 ],
   "x" : 2428.2936351021885,
@@ -18168,7 +18178,7 @@
         "flat" : 0.0,
         "mult" : 0.0,
         "override" : "NaN",
-        "globalMult" : 0.01,
+        "globalMult" : 0.02,
         "equipmentMult" : 0.0,
         "passiveMult" : 0.0
       },
@@ -18176,7 +18186,7 @@
         "flat" : 0.0,
         "mult" : 0.0,
         "override" : "NaN",
-        "globalMult" : 0.01,
+        "globalMult" : 0.02,
         "equipmentMult" : 0.0,
         "passiveMult" : 0.0
       }
@@ -18192,7 +18202,7 @@
       "flat" : 0.0,
       "mult" : 0.0,
       "override" : "NaN",
-      "globalMult" : 0.01,
+      "globalMult" : 0.02,
       "equipmentMult" : 0.0,
       "passiveMult" : 0.0
     },
@@ -18200,13 +18210,13 @@
       "flat" : 0.0,
       "mult" : 0.0,
       "override" : "NaN",
-      "globalMult" : 0.01,
+      "globalMult" : 0.02,
       "equipmentMult" : 0.0,
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 428,
@@ -18260,8 +18270,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 429,
@@ -18315,8 +18325,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 430,
@@ -18354,8 +18364,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 431,
@@ -18393,8 +18403,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 432,
@@ -18432,8 +18442,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 433,
@@ -18471,8 +18481,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 434,
@@ -18510,8 +18520,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 435,
@@ -18549,8 +18559,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 436,
@@ -18588,8 +18598,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 437,
@@ -18627,8 +18637,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 438,
@@ -18682,8 +18692,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 439,
@@ -18737,8 +18747,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 440,
@@ -18792,8 +18802,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 441,
@@ -18847,8 +18857,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 442,
@@ -18902,8 +18912,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 443,
@@ -18941,8 +18951,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 444,
@@ -18980,8 +18990,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 445,
@@ -19019,8 +19029,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 446,
@@ -19058,8 +19068,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 447,
@@ -19088,8 +19098,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "VITALITY" : {
       "flat" : 0.0,
@@ -19127,8 +19137,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "VITALITY" : {
       "flat" : 0.0,
@@ -19166,8 +19176,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "VITALITY" : {
       "flat" : 0.0,
@@ -19205,8 +19215,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "VITALITY" : {
       "flat" : 0.0,
@@ -19244,8 +19254,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "VITALITY" : {
       "flat" : 0.0,
@@ -19279,13 +19289,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIGHTING_STYLE" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 453,
@@ -19310,13 +19320,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIGHTING_STYLE" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 454,
@@ -19341,13 +19351,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIGHTING_STYLE" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 455,
@@ -19372,13 +19382,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIGHTING_STYLE" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 456,
@@ -19403,13 +19413,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIGHTING_STYLE" : {
       "flat" : 0.0,
       "mult" : 0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 457,
@@ -19434,13 +19444,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "FIGHTING_STYLE" : {
       "flat" : 0.0,
       "mult" : 0.08
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 458,
@@ -19478,8 +19488,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 459,
@@ -19517,8 +19527,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 460,
@@ -19556,8 +19566,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 461,
@@ -19595,8 +19605,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 462,
@@ -19650,8 +19660,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 463,
@@ -19689,8 +19699,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 464,
@@ -19728,8 +19738,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 465,
@@ -19767,8 +19777,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 466,
@@ -19806,8 +19816,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 467,
@@ -19845,8 +19855,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 468,
@@ -19884,8 +19894,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 469,
@@ -19910,13 +19920,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "DURATION" : {
       "flat" : 0.0,
       "mult" : -0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 470,
@@ -19941,13 +19951,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "DURATION" : {
       "flat" : 0.0,
       "mult" : -0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 471,
@@ -19972,13 +19982,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "DURATION" : {
       "flat" : 0.0,
       "mult" : -0.02
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 472,
@@ -20003,13 +20013,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "DRAWBACK" : {
       "flat" : 0.0,
       "mult" : -0.05
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 473,
@@ -20034,13 +20044,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "PURE" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 474,
@@ -20065,13 +20075,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "PURE" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 475,
@@ -20096,13 +20106,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "PURE" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 476,
@@ -20127,13 +20137,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "PURE" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 477,
@@ -20158,13 +20168,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "PURE" : {
       "flat" : 0.0,
       "mult" : 0.03
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 478,
@@ -20189,13 +20199,13 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : {
     "PURE" : {
       "flat" : 0.0,
       "mult" : 0.09
     }
   },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 479,
@@ -20233,8 +20243,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 480,
@@ -20272,8 +20282,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 481,
@@ -20311,8 +20321,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 482,
@@ -20350,8 +20360,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 483,
@@ -20389,8 +20399,8 @@
       "passiveMult" : 0.0
     }
   },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : { }
 }, {
   "id" : 484,
@@ -20435,8 +20445,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -20506,8 +20516,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -20577,8 +20587,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -20680,8 +20690,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -20767,8 +20777,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -20806,8 +20816,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 0.0,
@@ -20845,8 +20855,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "VITALITY" : {
       "flat" : 0.0,
@@ -20884,8 +20894,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "DEXTERITY" : {
       "flat" : 0.0,
@@ -20923,8 +20933,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "WISDOM" : {
       "flat" : 0.0,
@@ -20962,8 +20972,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "INTELLIGENCE" : {
       "flat" : 0.0,
@@ -21001,8 +21011,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "SMALL",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "LUCK" : {
       "flat" : 0.0,
@@ -21040,8 +21050,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "STRENGTH" : {
       "flat" : 0.0,
@@ -21079,8 +21089,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "AGILITY" : {
       "flat" : 0.0,
@@ -21118,8 +21128,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "VITALITY" : {
       "flat" : 0.0,
@@ -21157,8 +21167,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "DEXTERITY" : {
       "flat" : 0.0,
@@ -21196,8 +21206,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "WISDOM" : {
       "flat" : 0.0,
@@ -21235,8 +21245,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "INTELLIGENCE" : {
       "flat" : 0.0,
@@ -21274,8 +21284,8 @@
   "equipmentSlotMult" : { },
   "nodeType" : "NOTABLE",
   "statModifiers" : { },
-  "transferModifiers" : { },
   "skillModifiers" : { },
+  "transferModifiers" : { },
   "statusModifiers" : {
     "LUCK" : {
       "flat" : 0.0,
