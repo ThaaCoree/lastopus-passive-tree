@@ -279,7 +279,7 @@ canvas.addEventListener('touchend', (e) => {
     lastTouchDistance = 0;
 });
 
-fetch('passives.json')
+fetch('passives-display.json')
     .then(response => response.json())
     .then(data => {
         nodes = data;
