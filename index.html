@@ -161,9 +161,11 @@ renderNodes();
         for (const connId of node.connectedNodes) {
             const target = nodes.find(n => n.id === connId);
             if (target) {
+                const a = centerOf(node);
+                const b = centerOf(target);
                 ctx.beginPath();
-                ctx.moveTo(node.x-toReduceX, node.y-toReduceY);
-                ctx.lineTo(target.x-toReduceX, target.y-toReduceY);
+                ctx.moveTo(a.x, a.y);
+                ctx.lineTo(b.x, b.y);
                 ctx.stroke();
             }
         }
@@ -179,6 +181,14 @@ function updatePropertyPanel(node) {
     document.getElementById('nodeLore').innerText = `${node ? node.lore : ''}`;
 }
 
+function centerOf(node) {
+    const half = imageSizes[node.nodeType] / 2;
+    return {
+        x: node.x - TO_REDUCE + half,
+        y: node.y - TO_REDUCE + half
+    };
+}
+
 function renderNodes() {
     for (const node of nodes) {
         const image = images[node.nodeType];
@@ -191,7 +201,9 @@ function renderNodes() {
 
         // ถ้ากำลังค้นหา node ที่ไม่ตรงให้จางลง
         ctx.globalAlpha = (searchActive && !isMatch) ? 0.2 : 1;
-        ctx.drawImage(image, cx - imageSize / 2, cy - imageSize / 2, imageSize, imageSize);
+        const c = centerOf(node);
+        ctx.drawImage(image, c.x - imageSize / 2, c.y - imageSize / 2, imageSize, imageSize);
+        // วงแหวนไฮไลต์และ hit-test ตอนคลิกก็ใช้ c.x, c.y เช่นกัน
         ctx.globalAlpha = 1;
 
         // วงแหวนสีฟ้าให้ node ที่ตรงกับคำค้น
