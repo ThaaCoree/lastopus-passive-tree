@@ -53,6 +53,7 @@
 <div id="container">
 <canvas id="treeCanvas"></canvas>
     <div id="propertyPanel">
+        <select id="unitSelect" style="width:100%; margin-bottom:8px; padding:8px; background:#1D1F29; color:white; border:1px solid #555; border-radius:4px;"></select>
         <input id="searchBox" type="text" placeholder="ค้นหา node..." autocomplete="off">
         <div id="searchInfo"></div>
         <h2>Node Property</h2>
@@ -197,15 +198,30 @@ function renderNodes() {
 
         const c = centerOf(node);
         const isMatch = matchedIds.has(node.id);
+        const isAllocated = allocatedIds.has(node.id);
 
-        ctx.globalAlpha = (searchActive && !isMatch) ? 0.2 : 1;
+        // ความจาง: ถ้าเลือก unit ให้ยึดตาม allocate, ถ้าไม่ก็ยึดตาม search
+        let alpha = 1;
+        if (unitActive && !isAllocated) alpha = 0.25;
+        else if (!unitActive && searchActive && !isMatch) alpha = 0.2;
+
+        ctx.globalAlpha = alpha;
         ctx.drawImage(image, c.x - imageSize / 2, c.y - imageSize / 2, imageSize, imageSize);
         ctx.globalAlpha = 1;
+
+        // เรืองแสงให้ node ที่ allocate แล้ว
+        if (unitActive && isAllocated) {
+            ctx.beginPath();
+            ctx.arc(c.x, c.y, imageSize / 2 + 3, 0, Math.PI * 2);
+            ctx.strokeStyle = 'orange';
+            ctx.lineWidth = 3 / scale;
+            ctx.stroke();
+        }
 
         if (searchActive && isMatch) {
             ctx.beginPath();
             ctx.arc(c.x, c.y, imageSize / 2 + 2, 0, Math.PI * 2);
-            ctx.strokeStyle = "cyan";
+            ctx.strokeStyle = 'cyan';
             ctx.lineWidth = 3 / scale;
             ctx.stroke();
         }
@@ -213,7 +229,7 @@ function renderNodes() {
         if (node === selectedNode) {
             ctx.beginPath();
             ctx.arc(c.x, c.y, imageSize / 2 + 4, 0, Math.PI * 2);
-            ctx.strokeStyle = "gold";
+            ctx.strokeStyle = 'gold';
             ctx.lineWidth = 3 / scale;
             ctx.stroke();
         }
@@ -357,6 +373,60 @@ fetch('passives-display.json')
         drawTree();
         renderNodes();
     });
+
+    //load unit จาก server
+    const UNIT_NAMES = [
+  "Select", "Akivili", "Leda", "Pumpkin'Slayerman", "Acheros Aki", "Twelve",
+  "Slafier", "Shiranui", "Four-Leaf Clover777", "Onebrek", "Christ",
+  "Aard Archer", "Esther", "Yasha", "Voahri", "Scarlet", "Marrhe", "Q-Bik", "Silver Obsidian"
+];
+
+const allocatedIds = new Set();
+let unitActive = false;
+
+// ปรับตรงนี้ให้ตรงกับ JSON จริงของ unit
+function extractAllocatedIds(unit) {
+    const map = unit.allocatedPassives || {};
+    return Object.keys(map).map(Number);
+}
+
+function setAllocated(ids) {
+    allocatedIds.clear();
+    ids.forEach(id => allocatedIds.add(id));
+    unitActive = ids.length > 0;
+    drawTree();
+}
+
+function renderComboBox() {
+    const select = document.getElementById('unitSelect');
+    select.innerHTML = '';
+    UNIT_NAMES.forEach(name => {
+        const option = document.createElement('option');
+        option.value = name;
+        option.textContent = name;
+        select.appendChild(option);
+    });
+
+    select.onchange = async () => {
+        const selected = select.value;
+        if (selected === 'Select') {
+            setAllocated([]);
+            return;
+        }
+        try {
+            const res = await fetch(
+                `https://lastopus-discord-service.onrender.com/get_unit?name=${encodeURIComponent(selected)}`
+            );
+            const data = await res.json();
+            setAllocated(extractAllocatedIds(data));
+        } catch (err) {
+            console.error('โหลด unit ไม่สำเร็จ', err);
+            setAllocated([]);
+        }
+    };
+}
+
+renderComboBox();
 </script>
 
 
