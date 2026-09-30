@@ -154,24 +154,29 @@ renderNodes();
 
     // วาดเส้นเชื่อม
     ctx.strokeStyle = 'white';
-    ctx.lineWidth = 2 / (scale*1.5); // เส้นบางลงเมื่อซูมออก
+    ctx.lineWidth = 2 / (scale * 1.5);
     for (const node of nodes) {
-    const toReduceX = 2400;
-    const toReduceY = 2400;
-        if (!node.connectedNodes) continue;
-        for (const connId of node.connectedNodes) {
-            const target = nodes.find(n => n.id === connId);
-            if (target) {
-                const a = centerOf(node);
-                const b = centerOf(target);
-                ctx.beginPath();
-                ctx.moveTo(a.x, a.y);
-                ctx.lineTo(b.x, b.y);
-                ctx.stroke();
-            }
-        }
+    if (!node.connectedNodes) continue;
+    for (const connId of node.connectedNodes) {
+        const target = nodes.find(n => n.id === connId);
+        if (!target) continue;
+
+        const lit = unitActive && allocatedIds.has(node.id) && allocatedIds.has(target.id);
+
+        ctx.strokeStyle = lit ? 'gold' : 'white';
+        ctx.globalAlpha = (unitActive && !lit) ? 0.25 : 1;
+
+        const a = centerOf(node);
+        const b = centerOf(target);
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(b.x, b.y);
+        ctx.stroke();
     }
-        renderNodes();
+}
+ctx.globalAlpha = 1;
+
+renderNodes();
 }
 
 // ฟังก์ชันอัปเดต Property Panel
@@ -200,23 +205,23 @@ function renderNodes() {
         const isMatch = matchedIds.has(node.id);
         const isAllocated = allocatedIds.has(node.id);
 
-        // ความจาง: ถ้าเลือก unit ให้ยึดตาม allocate, ถ้าไม่ก็ยึดตาม search
         let alpha = 1;
         if (unitActive && !isAllocated) alpha = 0.25;
         else if (!unitActive && searchActive && !isMatch) alpha = 0.2;
 
         ctx.globalAlpha = alpha;
-        ctx.drawImage(image, c.x - imageSize / 2, c.y - imageSize / 2, imageSize, imageSize);
-        ctx.globalAlpha = 1;
 
-        // เรืองแสงให้ node ที่ allocate แล้ว
+        // แสงเรืองรอบ node ที่ allocate
         if (unitActive && isAllocated) {
-            ctx.beginPath();
-            ctx.arc(c.x, c.y, imageSize / 2 + 3, 0, Math.PI * 2);
-            ctx.strokeStyle = 'orange';
-            ctx.lineWidth = 3 / scale;
-            ctx.stroke();
+            ctx.shadowColor = 'rgba(255, 215, 0, 0.9)';
+            ctx.shadowBlur = 25;
         }
+        ctx.drawImage(image, c.x - imageSize / 2, c.y - imageSize / 2, imageSize, imageSize);
+
+        // รีเซ็ต shadow ไม่ให้ไปติดตัวอื่น
+        ctx.shadowColor = 'transparent';
+        ctx.shadowBlur = 0;
+        ctx.globalAlpha = 1;
 
         if (searchActive && isMatch) {
             ctx.beginPath();
