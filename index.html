@@ -228,22 +228,21 @@ function renderNodes() {
 
 // เมื่อคลิกเพื่อเลือกโหนด
 canvas.addEventListener('click', (e) => {
-    if (isDragging) return; // ถ้ากำลังลาก ไม่ต้องเลือก
+    if (isDragging) return;
 
-    const toReduceX = 2400;
-    const toReduceY = 2400;
     const rect = canvas.getBoundingClientRect();
     const clickX = (e.clientX - rect.left - offsetX) / scale;
     const clickY = (e.clientY - rect.top - offsetY) / scale;
 
     selectedNode = null;
+    let bestDist = Infinity;
     for (const node of nodes) {
-        const dx = node.x - toReduceX - clickX;
-        const dy = node.y - toReduceY - clickY;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance <= 60) {
+        const c = centerOf(node);
+        const radius = imageSizes[node.nodeType] / 2;
+        const dist = Math.hypot(c.x - clickX, c.y - clickY);
+        if (dist <= radius && dist < bestDist) {
+            bestDist = dist;
             selectedNode = node;
-            break;
         }
     }
     updatePropertyPanel(selectedNode);
