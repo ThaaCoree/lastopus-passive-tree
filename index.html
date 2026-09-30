@@ -195,32 +195,26 @@ function renderNodes() {
         const imageSize = imageSizes[node.nodeType];
         if (!image || !imageSize) continue;
 
-        const cx = node.x - TO_REDUCE;
-        const cy = node.y - TO_REDUCE;
+        const c = centerOf(node);
         const isMatch = matchedIds.has(node.id);
 
-        // ถ้ากำลังค้นหา node ที่ไม่ตรงให้จางลง
         ctx.globalAlpha = (searchActive && !isMatch) ? 0.2 : 1;
-        const c = centerOf(node);
         ctx.drawImage(image, c.x - imageSize / 2, c.y - imageSize / 2, imageSize, imageSize);
-        // วงแหวนไฮไลต์และ hit-test ตอนคลิกก็ใช้ c.x, c.y เช่นกัน
         ctx.globalAlpha = 1;
 
-        // วงแหวนสีฟ้าให้ node ที่ตรงกับคำค้น
         if (searchActive && isMatch) {
             ctx.beginPath();
-            ctx.arc(cx, cy, imageSize / 2 + 2, 0, Math.PI * 2);
+            ctx.arc(c.x, c.y, imageSize / 2 + 2, 0, Math.PI * 2);
             ctx.strokeStyle = "cyan";
             ctx.lineWidth = 3 / scale;
             ctx.stroke();
         }
 
-        // วงแหวนสีทองสำหรับ node ที่เลือกอยู่
         if (node === selectedNode) {
             ctx.beginPath();
-            ctx.arc(cx, cy, imageSize / 2 + 4, 0, Math.PI * 2);
+            ctx.arc(c.x, c.y, imageSize / 2 + 4, 0, Math.PI * 2);
             ctx.strokeStyle = "gold";
-            ctx.lineWidth = 3;
+            ctx.lineWidth = 3 / scale;
             ctx.stroke();
         }
     }
