@@ -31,6 +31,21 @@
     font-size: 0.8em; /* เล็กกว่าปกติ */
     color: gray;      /* สีเทา */
     }
+    #searchBox {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    background: #1D1F29;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 4px;
+    }
+    #searchInfo {
+    font-size: 0.8em;
+    color: #aaa;
+    margin: 6px 0 12px;
+    min-height: 1em;
+    }
 </style>
 
 </head>
@@ -38,6 +53,8 @@
 <div id="container">
 <canvas id="treeCanvas"></canvas>
     <div id="propertyPanel">
+        <input id="searchBox" type="text" placeholder="ค้นหา node..." autocomplete="off">
+        <div id="searchInfo"></div>
         <h2>Node Property</h2>
         <p id="nodeName"></p>
         <p id="nodeStatusDes"></p>
@@ -53,6 +70,74 @@ canvas.width = window.innerWidth - 250;
 canvas.height = window.innerHeight;
 
 let nodes = [];
+
+const TO_REDUCE = 2400; // ใช้แทน toReduceX/Y ที่ซ้ำกันหลายที่
+
+let searchActive = false;
+let searchResults = [];
+let searchIndex = -1;
+const matchedIds = new Set();
+
+function runSearch(query) {
+    const q = query.trim().toLowerCase();
+    searchActive = q.length > 0;
+    matchedIds.clear();
+    searchResults = [];
+    searchIndex = -1;
+
+    if (searchActive) {
+        const terms = q.split(/\s+/); // พิมพ์หลายคำได้ ต้องเจอทุกคำ
+        searchResults = nodes.filter(n => {
+            const text = [n.name, n.statusDescription, n.description, n.lore]
+                .filter(Boolean).join(' ').toLowerCase();
+            return terms.every(t => text.includes(t));
+        });
+        searchResults.forEach(n => matchedIds.add(n.id));
+    }
+
+    if (searchResults.length) gotoResult(0);
+    else { updateSearchInfo(); drawTree(); }
+}
+
+function gotoResult(i) {
+    if (!searchResults.length) return;
+    searchIndex = (i + searchResults.length) % searchResults.length;
+    const node = searchResults[searchIndex];
+
+    selectedNode = node;
+    // เลื่อนกล้องให้ node อยู่กลางจอ
+    offsetX = canvas.width / 2 - (node.x - TO_REDUCE) * scale;
+    offsetY = canvas.height / 2 - (node.y - TO_REDUCE) * scale;
+
+    updatePropertyPanel(node);
+    updateSearchInfo();
+    drawTree();
+}
+
+function updateSearchInfo() {
+    const el = document.getElementById('searchInfo');
+    if (!searchActive) el.innerText = '';
+    else if (!searchResults.length) el.innerText = 'ไม่พบ';
+    else el.innerText = `พบ ${searchResults.length} node (${searchIndex + 1}/${searchResults.length}) — Enter = ถัดไป, Shift+Enter = ก่อนหน้า`;
+}
+
+// debounce เล็กน้อยกันกระตุกตอนพิมพ์
+let searchTimer;
+const searchBox = document.getElementById('searchBox');
+searchBox.addEventListener('input', () => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => runSearch(searchBox.value), 150);
+});
+searchBox.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        gotoResult(searchIndex + (e.shiftKey ? -1 : 1));
+    } else if (e.key === 'Escape') {
+        searchBox.value = '';
+        runSearch('');
+    }
+});
+
 let selectedNode = null;
 
 let offsetX = 0;   // การเลื่อนหน้าจอ
@@ -124,23 +209,32 @@ function updatePropertyPanel(node) {
 
 function renderNodes() {
     for (const node of nodes) {
-        const toReduceX = 2400;
-        const toReduceY = 2400;
-
         const image = images[node.nodeType];
         const imageSize = imageSizes[node.nodeType];
-
         if (!image || !imageSize) continue;
 
-        const drawX = node.x - toReduceX - imageSize / 2;
-        const drawY = node.y - toReduceY - imageSize / 2;
+        const cx = node.x - TO_REDUCE;
+        const cy = node.y - TO_REDUCE;
+        const isMatch = matchedIds.has(node.id);
 
-        ctx.drawImage(image, drawX, drawY, imageSize, imageSize);
+        // ถ้ากำลังค้นหา node ที่ไม่ตรงให้จางลง
+        ctx.globalAlpha = (searchActive && !isMatch) ? 0.2 : 1;
+        ctx.drawImage(image, cx - imageSize / 2, cy - imageSize / 2, imageSize, imageSize);
+        ctx.globalAlpha = 1;
 
-        // Highlight node ที่ถูกเลือก
+        // วงแหวนสีฟ้าให้ node ที่ตรงกับคำค้น
+        if (searchActive && isMatch) {
+            ctx.beginPath();
+            ctx.arc(cx, cy, imageSize / 2 + 2, 0, Math.PI * 2);
+            ctx.strokeStyle = "cyan";
+            ctx.lineWidth = 3 / scale;
+            ctx.stroke();
+        }
+
+        // วงแหวนสีทองสำหรับ node ที่เลือกอยู่
         if (node === selectedNode) {
             ctx.beginPath();
-            ctx.arc(node.x - toReduceX, node.y - toReduceY, imageSize / 2 + 4, 0, Math.PI * 2);
+            ctx.arc(cx, cy, imageSize / 2 + 4, 0, Math.PI * 2);
             ctx.strokeStyle = "gold";
             ctx.lineWidth = 3;
             ctx.stroke();
