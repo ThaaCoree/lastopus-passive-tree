@@ -70,58 +70,33 @@ canvas.width = window.innerWidth - 250;
 canvas.height = window.innerHeight;
 
 let nodes = [];
-
-const TO_REDUCE = 2400; // ใช้แทน toReduceX/Y ที่ซ้ำกันหลายที่
+const TO_REDUCE = 2400;
 
 let searchActive = false;
-let searchResults = [];
-let searchIndex = -1;
+let matchCount = 0;
 const matchedIds = new Set();
 
 function runSearch(query) {
     const q = query.trim().toLowerCase();
     searchActive = q.length > 0;
     matchedIds.clear();
-    searchResults = [];
-    searchIndex = -1;
 
     if (searchActive) {
-        const terms = q.split(/\s+/); // พิมพ์หลายคำได้ ต้องเจอทุกคำ
-        searchResults = nodes.filter(n => {
+        const terms = q.split(/\s+/); // หลายคำ ต้องเจอทุกคำ
+        for (const n of nodes) {
             const text = [n.name, n.statusDescription, n.description, n.lore]
                 .filter(Boolean).join(' ').toLowerCase();
-            return terms.every(t => text.includes(t));
-        });
-        searchResults.forEach(n => matchedIds.add(n.id));
+            if (terms.every(t => text.includes(t))) matchedIds.add(n.id);
+        }
     }
+    matchCount = matchedIds.size;
 
-    if (searchResults.length) gotoResult(0);
-    else { updateSearchInfo(); drawTree(); }
-}
+    const el = document.getElementById('searchInfo');
+    el.innerText = !searchActive ? '' : (matchCount ? `พบ ${matchCount} node` : 'ไม่พบ');
 
-function gotoResult(i) {
-    if (!searchResults.length) return;
-    searchIndex = (i + searchResults.length) % searchResults.length;
-    const node = searchResults[searchIndex];
-
-    selectedNode = node;
-    // เลื่อนกล้องให้ node อยู่กลางจอ
-    offsetX = canvas.width / 2 - (node.x - TO_REDUCE) * scale;
-    offsetY = canvas.height / 2 - (node.y - TO_REDUCE) * scale;
-
-    updatePropertyPanel(node);
-    updateSearchInfo();
     drawTree();
 }
 
-function updateSearchInfo() {
-    const el = document.getElementById('searchInfo');
-    if (!searchActive) el.innerText = '';
-    else if (!searchResults.length) el.innerText = 'ไม่พบ';
-    else el.innerText = `พบ ${searchResults.length} node (${searchIndex + 1}/${searchResults.length}) — Enter = ถัดไป, Shift+Enter = ก่อนหน้า`;
-}
-
-// debounce เล็กน้อยกันกระตุกตอนพิมพ์
 let searchTimer;
 const searchBox = document.getElementById('searchBox');
 searchBox.addEventListener('input', () => {
@@ -129,10 +104,7 @@ searchBox.addEventListener('input', () => {
     searchTimer = setTimeout(() => runSearch(searchBox.value), 150);
 });
 searchBox.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-        e.preventDefault();
-        gotoResult(searchIndex + (e.shiftKey ? -1 : 1));
-    } else if (e.key === 'Escape') {
+    if (e.key === 'Escape') {
         searchBox.value = '';
         runSearch('');
     }
