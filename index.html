@@ -448,7 +448,6 @@ function renderComboBox() {
     });
 
     select.onchange = async () => {
-        setAllocated(extractAllocatedIds(data), data.allocatedPassives);
         const selected = select.value;
         if (selected === 'Select') {
             setAllocated([]);
@@ -459,7 +458,7 @@ function renderComboBox() {
                 `https://lastopus-discord-service.onrender.com/get_unit?name=${encodeURIComponent(selected)}`
             );
             const data = await res.json();
-            setAllocated(extractAllocatedIds(data));
+            setAllocated(extractAllocatedIds(data), data.allocatedPassives);
         } catch (err) {
             console.error('โหลด unit ไม่สำเร็จ', err);
             setAllocated([]);
