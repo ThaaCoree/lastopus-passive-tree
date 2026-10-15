@@ -77,6 +77,37 @@ let searchActive = false;
 let matchCount = 0;
 const matchedIds = new Set();
 
+const TEXT_FIELDS = ['name', 'description', 'statusDescription', 'lore'];
+const originalText = new Map();   // id -> ข้อความต้นฉบับ
+const dreamIds = new Set();
+
+function restoreOriginals() {
+    for (const n of nodes) {
+        const o = originalText.get(n.id);
+        if (o) Object.assign(n, o);
+    }
+    originalText.clear();
+    dreamIds.clear();
+}
+
+function applyDreams(allocatedMap) {
+    restoreOriginals();   // ล้างของ unit ก่อนหน้า
+
+    const byId = new Map(nodes.map(n => [n.id, n]));   // (ถ้ามี nodeById อยู่แล้วใช้อันนั้น)
+    for (const [key, p] of Object.entries(allocatedMap || {})) {
+        if (!(p.dream === true || p.isDream === true)) continue;   // ดูหมายเหตุเรื่องชื่อ field ด้านล่าง
+        const node = byId.get(Number(key));
+        if (!node) continue;
+
+        // เก็บต้นฉบับไว้ก่อนทับ
+        originalText.set(node.id, Object.fromEntries(TEXT_FIELDS.map(f => [f, node[f]])));
+        for (const f of TEXT_FIELDS) {
+            if (p[f] != null) node[f] = p[f];
+        }
+        dreamIds.add(node.id);
+    }
+}
+
 function runSearch(query) {
     const q = query.trim().toLowerCase();
     searchActive = q.length > 0;
@@ -213,7 +244,9 @@ function renderNodes() {
 
         // แสงเรืองรอบ node ที่ allocate
         if (unitActive && isAllocated) {
-            ctx.shadowColor = 'rgba(255, 215, 0, 0.9)';
+            ctx.shadowColor = dreamIds.has(node.id)
+                ? 'rgba(180, 100, 255, 0.95)'   // ม่วง = Dream
+                : 'rgba(255, 215, 0, 0.9)';     // ทอง = ปกติ
             ctx.shadowBlur = 25;
         }
         ctx.drawImage(image, c.x - imageSize / 2, c.y - imageSize / 2, imageSize, imageSize);
@@ -395,11 +428,13 @@ function extractAllocatedIds(unit) {
     return Object.keys(map).map(Number);
 }
 
-function setAllocated(ids) {
+function setAllocated(ids, allocatedMap = null) {
     allocatedIds.clear();
     ids.forEach(id => allocatedIds.add(id));
+    applyDreams(allocatedMap);          // ← เพิ่ม
     unitActive = ids.length > 0;
-    drawTree();
+    updatePropertyPanel(selectedNode);  // รีเฟรช panel ถ้ากำลังเลือก node อยู่
+    runSearch(searchBox.value);         // search ใหม่ (เรียก drawTree ให้เอง)
 }
 
 function renderComboBox() {
@@ -413,6 +448,7 @@ function renderComboBox() {
     });
 
     select.onchange = async () => {
+        setAllocated(extractAllocatedIds(data), data.allocatedPassives);
         const selected = select.value;
         if (selected === 'Select') {
             setAllocated([]);
