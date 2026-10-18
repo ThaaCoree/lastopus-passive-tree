@@ -527,7 +527,7 @@ function updateButtons() {
     document.getElementById('pointInfo').innerText =
         currentUnit ? `Starmap Point คงเหลือ: ${remainingPoints}` : '';
     document.getElementById('resetPointInfo').innerText =
-        currentUnit ? `Starmap Reset Point คงเหลือ: ${resetPoints}` : '';
+        currentUnit ? `Reset Point คงเหลือ: ${resetPoints}` : '';
     document.getElementById('btnAllocate').disabled =
         !(selectedNode && currentUnit && canAllocate(selectedNode));
     document.getElementById('btnUnallocate').disabled =
