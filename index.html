@@ -6,7 +6,7 @@
     <title>Passive Tree Viewer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Sarabun:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
     body, html {
         margin: 0;
@@ -133,17 +133,15 @@
     color: #888;
 }
 #propertyPanel {
-    font-family: 'Sarabun', sans-serif;
+    font-family: 'IBM Plex Sans Thai', 'Sarabun', sans-serif;
     overflow-y: auto;
 }
-
 .panel-title {
     margin: 18px 0 10px;
-    font-family: 'Cinzel', 'Sarabun', serif;
-    font-size: 1.05em;
-    letter-spacing: 0.08em;
+    font-size: 0.95em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
     color: #ffd700;
-    text-transform: uppercase;
     padding-bottom: 6px;
     border-bottom: 1px solid #3a3d4d;
 }
@@ -187,8 +185,8 @@
 
 /* ชื่อโหนด */
 #nodeName {
-    font-family: 'Cinzel', 'Sarabun', serif;
-    font-size: 1.1em;
+    font-size: 1.05em;
+    font-weight: 600;
     color: #ffd700;
     margin-bottom: 8px;
     word-break: break-word;
@@ -223,7 +221,6 @@
     border-top: 1px solid #3a3d4d;
     color: #8a8d9c;
     font-size: 0.8em;
-    font-style: italic;
     line-height: 1.5;
     white-space: pre-line;
 }
@@ -647,6 +644,7 @@ let originalRemaining = 0;      // passive point ตอนโหลด unit
 let originalResetPoints = 0;    // starmap_reset_point ตอนโหลด unit
 let nodeById = new Map();
 let rootId = null;
+let rootNeighbors = new Set();   // id ของโหนดที่ติดกับ root
 let dirty = false;
 let originalIds = new Set();
 
@@ -654,6 +652,9 @@ function indexNodes() {
     nodeById = new Map(nodes.map(n => [n.id, n]));
     const root = nodes.find(n => !n.connectedNodes || n.connectedNodes.length === 0);
     rootId = root ? root.id : null;
+    rootNeighbors = new Set(
+        nodes.filter(n => (n.connectedNodes || []).includes(rootId)).map(n => n.id)
+    );
 }
 
 // ปรับตรงนี้ให้ตรงกับ JSON จริงของ unit
@@ -675,6 +676,11 @@ function canAllocate(node) {
     if (allocatedIds.has(node.id)) return false;
     if (remainingPoints <= 0) return false;
     if (node.id === rootId) return true;
+
+    // ทางออกจาก root มีได้ทางเดียว
+    if (rootNeighbors.has(node.id) &&
+        [...allocatedIds].some(id => rootNeighbors.has(id))) return false;
+
     return (node.connectedNodes || []).some(id => allocatedIds.has(id));
 }
 
