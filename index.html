@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <title>Passive Tree Viewer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Sarabun:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
     body, html {
         margin: 0;
@@ -26,10 +30,6 @@
         color: white;
         padding: 20px;
         box-sizing: border-box;
-    }
-    #nodeLore {
-    font-size: 0.8em; /* เล็กกว่าปกติ */
-    color: gray;      /* สีเทา */
     }
     #searchBox {
     width: 100%;
@@ -132,6 +132,107 @@
     border-color: #555;
     color: #888;
 }
+#propertyPanel {
+    font-family: 'Sarabun', sans-serif;
+    overflow-y: auto;
+}
+
+.panel-title {
+    margin: 18px 0 10px;
+    font-family: 'Cinzel', 'Sarabun', serif;
+    font-size: 1.05em;
+    letter-spacing: 0.08em;
+    color: #ffd700;
+    text-transform: uppercase;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #3a3d4d;
+}
+
+.node-card {
+    padding: 12px 14px;
+    background: #1D1F29;
+    border: 1px solid #3a3d4d;
+    border-radius: 6px;
+}
+
+.node-card p {
+    margin: 0;
+}
+
+/* ยังไม่เลือกโหนด */
+.node-empty {
+    display: none;
+    color: #777;
+    font-size: 0.85em;
+    text-align: center;
+    padding: 14px 0;
+}
+.node-card.empty .node-empty { display: block; }
+.node-card.empty .node-content { display: none; }
+
+/* ป้ายประเภทโหนด */
+.node-badge {
+    display: inline-block;
+    padding: 1px 8px;
+    margin-bottom: 8px;
+    font-size: 0.65em;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    border-radius: 10px;
+    border: 1px solid #555;
+    color: #aaa;
+}
+.node-badge[data-type="NOTABLE"]  { color: #6ec1ff; border-color: rgba(110,193,255,.5); }
+.node-badge[data-type="KEYSTONE"] { color: #ffd700; border-color: rgba(255,215,0,.6); }
+
+/* ชื่อโหนด */
+#nodeName {
+    font-family: 'Cinzel', 'Sarabun', serif;
+    font-size: 1.1em;
+    color: #ffd700;
+    margin-bottom: 8px;
+    word-break: break-word;
+}
+#nodeName.dream {
+    color: #b464ff;
+    text-shadow: 0 0 8px rgba(180, 100, 255, 0.5);
+}
+
+/* ค่าสถานะ */
+#nodeStatusDes {
+    color: #8fd694;
+    font-weight: 600;
+    font-size: 0.9em;
+    line-height: 1.5;
+    white-space: pre-line;
+    margin-bottom: 8px;
+}
+
+/* คำอธิบาย */
+#nodeDes {
+    color: #d8dae5;
+    font-size: 0.88em;
+    line-height: 1.55;
+    white-space: pre-line;
+}
+
+/* lore */
+#nodeLore {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid #3a3d4d;
+    color: #8a8d9c;
+    font-size: 0.8em;
+    font-style: italic;
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+/* ซ่อนส่วนที่ไม่มีข้อความ */
+#nodeStatusDes:empty,
+#nodeDes:empty,
+#nodeLore:empty { display: none; }
+
 </style>
 
 </head>
@@ -142,11 +243,17 @@
         <select id="unitSelect" style="width:100%; margin-bottom:8px; padding:8px; background:#1D1F29; color:white; border:1px solid #555; border-radius:4px;"></select>
         <input id="searchBox" type="text" placeholder="ค้นหา node..." autocomplete="off">
         <div id="searchInfo"></div>
-        <h2>Node Property</h2>
+        <h2 class="panel-title">Node Property</h2>
+<div id="nodeCard" class="node-card empty">
+    <div class="node-empty">คลิกโหนดบนผังเพื่อดูรายละเอียด</div>
+    <div class="node-content">
+        <span id="nodeType" class="node-badge"></span>
         <p id="nodeName"></p>
         <p id="nodeStatusDes"></p>
-        <p id="nodeDes">-</p>
-        <p id="nodeLore">-</p>
+        <p id="nodeDes"></p>
+        <p id="nodeLore"></p>
+    </div>
+</div>
 
             <div class="point-box">
     <div id="pointInfo"></div>
@@ -310,10 +417,21 @@ renderNodes();
 
 // ฟังก์ชันอัปเดต Property Panel
 function updatePropertyPanel(node) {
-    document.getElementById('nodeName').innerText = `${node ? node.name : ''}`;
-    document.getElementById('nodeStatusDes').innerText = `${node ? node.statusDescription : ''}`;
-    document.getElementById('nodeDes').innerText = `${node ? node.description : ''}`;
-    document.getElementById('nodeLore').innerText = `${node ? node.lore : ''}`;
+    const card = document.getElementById('nodeCard');
+    card.classList.toggle('empty', !node);
+    if (!node) return;
+
+    const badge = document.getElementById('nodeType');
+    badge.textContent = node.nodeType || '';
+    badge.dataset.type = node.nodeType || '';
+
+    const nameEl = document.getElementById('nodeName');
+    nameEl.textContent = node.name || '';
+    nameEl.classList.toggle('dream', dreamIds.has(node.id));   // <- เพิ่ม
+
+    document.getElementById('nodeStatusDes').textContent = node.statusDescription || '';
+    document.getElementById('nodeDes').textContent = node.description || '';
+    document.getElementById('nodeLore').textContent = node.lore || '';
 }
 
 function centerOf(node) {
