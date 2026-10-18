@@ -62,6 +62,11 @@
         <p id="nodeDes">-</p>
         <p id="nodeLore">-</p>
     </div>
+
+    <div id="pointInfo" style="margin:8px 0;"></div>
+<button id="btnAllocate" disabled>Allocate</button>
+<button id="btnUnallocate" disabled>Unallocate</button>
+<button id="btnSave" disabled style="width:100%; margin-top:8px;">Save</button>
 </div>
 
 <script>
@@ -408,6 +413,7 @@ fetch('passives-display.json')
     .then(response => response.json())
     .then(data => {
         nodes = data;
+        indexNodes();
         drawTree();
         renderNodes();
     });
@@ -421,6 +427,19 @@ fetch('passives-display.json')
 
 const allocatedIds = new Set();
 let unitActive = false;
+let currentUnit = null;      // ข้อมูล unit จาก /get_unit
+let allocatedMap = {};       // id -> PassiveNode (ตัวที่จะส่งกลับ)
+let remainingPoints = 0;
+let nodeById = new Map();
+let rootId = null;
+let dirty = false;
+let originalIds = new Set();
+
+function indexNodes() {
+    nodeById = new Map(nodes.map(n => [n.id, n]));
+    const root = nodes.find(n => !n.connectedNodes || n.connectedNodes.length === 0);
+    rootId = root ? root.id : null;
+}
 
 // ปรับตรงนี้ให้ตรงกับ JSON จริงของ unit
 function extractAllocatedIds(unit) {
@@ -437,6 +456,110 @@ function setAllocated(ids, allocatedMap = null) {
     runSearch(searchBox.value);         // search ใหม่ (เรียก drawTree ให้เอง)
 }
 
+function canAllocate(node) {
+    if (allocatedIds.has(node.id)) return false;
+    if (remainingPoints <= 0) return false;
+    if (node.id === rootId) return true;
+    return (node.connectedNodes || []).some(id => allocatedIds.has(id));
+}
+
+function canDeallocate(node) {
+    const id = node.id;
+    if (!allocatedIds.has(id) || id === rootId) return false;
+
+    const visited = new Set();
+    const queue = [];
+
+    // จุดเริ่ม = โหนดที่ลงอยู่และติดกับ root
+    for (const aid of allocatedIds) {
+        if (aid === id || aid === rootId) continue;
+        const n = nodeById.get(aid);
+        if (n && (n.connectedNodes || []).includes(rootId)) {
+            visited.add(aid);
+            queue.push(aid);
+        }
+    }
+
+    // เดินต่อผ่านโหนดที่ลงอยู่ โดยข้ามโหนดที่จะถอน
+    while (queue.length) {
+        const cur = nodeById.get(queue.shift());
+        for (const next of (cur.connectedNodes || [])) {
+            if (next === id || next === rootId) continue;
+            if (allocatedIds.has(next) && !visited.has(next)) {
+                visited.add(next);
+                queue.push(next);
+            }
+        }
+    }
+
+    // ที่เหลือทุกตัวต้องเดินถึง
+    for (const aid of allocatedIds) {
+        if (aid === id || aid === rootId) continue;
+        if (!visited.has(aid)) return false;
+    }
+    return true;
+}
+
+function refreshFromMap() {
+    // ผ่าน setAllocated เพื่อให้ dream, search, วาดใหม่ ทำงานครบ
+    setAllocated(Object.keys(allocatedMap).map(Number), allocatedMap);
+    updateButtons();
+}
+
+function updateButtons() {
+    document.getElementById('pointInfo').innerText =
+        currentUnit ? `Passive point เหลือ: ${remainingPoints}` : '';
+    document.getElementById('btnAllocate').disabled =
+        !(selectedNode && currentUnit && canAllocate(selectedNode));
+    document.getElementById('btnUnallocate').disabled =
+        !(selectedNode && currentUnit && canDeallocate(selectedNode));
+    document.getElementById('btnSave').disabled = !(currentUnit && dirty);
+}
+
+document.getElementById('btnAllocate').onclick = () => {
+    if (!selectedNode || !canAllocate(selectedNode)) return;
+    allocatedMap[selectedNode.id] = { ...selectedNode };
+    remainingPoints--;
+    dirty = true;
+    refreshFromMap();
+};
+
+document.getElementById('btnUnallocate').onclick = () => {
+    if (!selectedNode || !canDeallocate(selectedNode)) return;
+    delete allocatedMap[selectedNode.id];
+    remainingPoints++;
+    dirty = true;
+    refreshFromMap();
+};
+
+document.getElementById('btnSave').onclick = async () => {
+    const current = new Set(Object.keys(allocatedMap).map(Number));
+    const added = [...current].filter(id => !originalIds.has(id));
+    const removed = [...originalIds].filter(id => !current.has(id));
+
+    try {
+        const res = await fetch('https://lastopus-discord-service.onrender.com/save_passives', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: currentUnit.name, added, removed })
+        });
+        if (!res.ok) throw new Error(await res.text());
+        originalIds = current;      // ครั้งหน้าคิดส่วนต่างจากจุดนี้
+        dirty = false;
+        updateButtons();
+    } catch (err) {
+        alert('บันทึกไม่สำเร็จ: ' + err.message);
+    }
+};
+
+function resetUnit() {
+    currentUnit = null;
+    allocatedMap = {};
+    remainingPoints = 0;
+    dirty = false;
+    refreshFromMap();
+}
+
 function renderComboBox() {
     const select = document.getElementById('unitSelect');
     select.innerHTML = '';
@@ -447,23 +570,28 @@ function renderComboBox() {
         select.appendChild(option);
     });
 
-    select.onchange = async () => {
-        const selected = select.value;
-        if (selected === 'Select') {
-            setAllocated([]);
-            return;
-        }
-        try {
-            const res = await fetch(
-                `https://lastopus-discord-service.onrender.com/get_unit?name=${encodeURIComponent(selected)}`
-            );
-            const data = await res.json();
-            setAllocated(extractAllocatedIds(data), data.allocatedPassives);
-        } catch (err) {
-            console.error('โหลด unit ไม่สำเร็จ', err);
-            setAllocated([]);
-        }
-    };
+select.onchange = async () => {
+    const selected = select.value;
+    if (selected === 'Select') {
+        resetUnit();
+        return;
+    }
+    try {
+        const res = await fetch(
+            `https://lastopus-discord-service.onrender.com/get_unit?name=${encodeURIComponent(selected)}`
+        );
+        const data = await res.json();
+        currentUnit = data;
+        allocatedMap = data.allocatedPassives || {};
+        originalIds = new Set(Object.keys(allocatedMap).map(Number));
+        remainingPoints = data.remainingPassiveTreePoint || 0;
+        dirty = false;
+        refreshFromMap();
+    } catch (err) {
+        console.error('โหลด unit ไม่สำเร็จ', err);
+        resetUnit();
+    }
+};
 }
 
 renderComboBox();
