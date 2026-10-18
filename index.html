@@ -63,6 +63,7 @@
         <p id="nodeLore">-</p>
 
             <div id="pointInfo" style="margin:8px 0;"></div>
+            <div id="resetPointInfo" style="margin:8px 0;"></div>
 <button id="btnAllocate" disabled>Allocate</button>
 <button id="btnUnallocate" disabled>Unallocate</button>
 <button id="btnSave" disabled style="width:100%; margin-top:8px;">Save</button>
@@ -431,6 +432,9 @@ let unitActive = false;
 let currentUnit = null;      // ข้อมูล unit จาก /get_unit
 let allocatedMap = {};       // id -> PassiveNode (ตัวที่จะส่งกลับ)
 let remainingPoints = 0;
+let resetPoints = 0;
+let originalRemaining = 0;      // passive point ตอนโหลด unit
+let originalResetPoints = 0;    // starmap_reset_point ตอนโหลด unit
 let nodeById = new Map();
 let rootId = null;
 let dirty = false;
@@ -467,6 +471,7 @@ function canAllocate(node) {
 function canDeallocate(node) {
     const id = node.id;
     if (!allocatedIds.has(id) || id === rootId) return false;
+    if (originalIds.has(id) && resetPoints <= 0) return false;
 
     const visited = new Set();
     const queue = [];
@@ -503,13 +508,26 @@ function canDeallocate(node) {
 
 function refreshFromMap() {
     // ผ่าน setAllocated เพื่อให้ dream, search, วาดใหม่ ทำงานครบ
+    recalcPoints();
     setAllocated(Object.keys(allocatedMap).map(Number), allocatedMap);
     updateButtons();
 }
 
+function recalcPoints() {
+    const current = new Set(Object.keys(allocatedMap).map(Number));
+    let added = 0, removed = 0;
+    for (const id of current) if (!originalIds.has(id)) added++;
+    for (const id of originalIds) if (!current.has(id)) removed++;
+
+    remainingPoints = originalRemaining - (added - removed);
+    resetPoints = originalResetPoints - removed;
+}
+
 function updateButtons() {
     document.getElementById('pointInfo').innerText =
-        currentUnit ? `Passive point เหลือ: ${remainingPoints}` : '';
+        currentUnit ? `Starmap Point คงเหลือ: ${remainingPoints}` : '';
+    document.getElementById('resetPointInfo').innerText =
+        currentUnit ? `Starmap Reset Point คงเหลือ: ${resetPoints}` : '';
     document.getElementById('btnAllocate').disabled =
         !(selectedNode && currentUnit && canAllocate(selectedNode));
     document.getElementById('btnUnallocate').disabled =
@@ -520,7 +538,6 @@ function updateButtons() {
 document.getElementById('btnAllocate').onclick = () => {
     if (!selectedNode || !canAllocate(selectedNode)) return;
     allocatedMap[selectedNode.id] = { ...selectedNode };
-    remainingPoints--;
     dirty = true;
     refreshFromMap();
 };
@@ -528,7 +545,6 @@ document.getElementById('btnAllocate').onclick = () => {
 document.getElementById('btnUnallocate').onclick = () => {
     if (!selectedNode || !canDeallocate(selectedNode)) return;
     delete allocatedMap[selectedNode.id];
-    remainingPoints++;
     dirty = true;
     refreshFromMap();
 };
@@ -544,7 +560,10 @@ document.getElementById('btnSave').onclick = async () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name: currentUnit.name, added, removed })
         });
-        if (!res.ok) throw new Error(await res.text());
+        const data = await res.text();
+      alert(data);
+      if (!res.ok) return;          // error: อยู่หน้าเดิม ให้ผู้ใช้แก้ต่อได้
+      window.location.reload();
         originalIds = current;      // ครั้งหน้าคิดส่วนต่างจากจุดนี้
         dirty = false;
         updateButtons();
@@ -556,7 +575,9 @@ document.getElementById('btnSave').onclick = async () => {
 function resetUnit() {
     currentUnit = null;
     allocatedMap = {};
-    remainingPoints = 0;
+    originalIds = new Set();
+    originalRemaining = 0;
+    originalResetPoints = 0;
     dirty = false;
     refreshFromMap();
 }
@@ -585,7 +606,8 @@ select.onchange = async () => {
         currentUnit = data;
         allocatedMap = data.allocatedPassives || {};
         originalIds = new Set(Object.keys(allocatedMap).map(Number));
-        remainingPoints = data.remainingPassiveTreePoint || 0;
+        originalRemaining = data.remainingPassiveTreePoint || 0;
+        originalResetPoints = data.starmap_reset_point || 0;
         dirty = false;
         refreshFromMap();
     } catch (err) {
