@@ -46,6 +46,92 @@
     margin: 6px 0 12px;
     min-height: 1em;
     }
+    .point-box {
+    margin: 14px 0 10px;
+    padding: 10px 12px;
+    background: #1D1F29;
+    border: 1px solid #3a3d4d;
+    border-radius: 6px;
+    font-size: 0.85em;
+    color: #c9cbd6;
+    line-height: 1.6;
+}
+
+.btn-row {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    flex: 1;
+    padding: 9px 10px;
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    background: #1D1F29;
+    border: 1px solid #555;
+    border-radius: 6px;
+    color: #e6e6e6;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.05s;
+}
+
+.btn:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+.btn:focus-visible {
+    outline: 2px solid #ffd700;
+    outline-offset: 2px;
+}
+
+/* Allocate: ทอง */
+.btn-allocate {
+    color: #ffd700;
+    border-color: rgba(255, 215, 0, 0.55);
+}
+.btn-allocate:hover:not(:disabled) {
+    background: rgba(255, 215, 0, 0.12);
+    border-color: #ffd700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.35);
+}
+
+/* Unallocate: แดงอ่อน */
+.btn-unallocate {
+    color: #ff7b7b;
+    border-color: rgba(255, 107, 107, 0.55);
+}
+.btn-unallocate:hover:not(:disabled) {
+    background: rgba(255, 107, 107, 0.12);
+    border-color: #ff6b6b;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.35);
+}
+
+/* Save: ปุ่มหลัก เต็มความกว้าง */
+.btn-save {
+    width: 100%;
+    margin-top: 10px;
+    padding: 11px;
+    color: #1D1F29;
+    background: linear-gradient(180deg, #ffd700, #d4a800);
+    border-color: #ffd700;
+}
+.btn-save:hover:not(:disabled) {
+    background: linear-gradient(180deg, #ffe34d, #e0b400);
+    box-shadow: 0 0 14px rgba(255, 215, 0, 0.5);
+}
+
+/* ปิดใช้งาน */
+.btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+.btn-save:disabled {
+    background: #3a3d4d;
+    border-color: #555;
+    color: #888;
+}
 </style>
 
 </head>
@@ -62,11 +148,17 @@
         <p id="nodeDes">-</p>
         <p id="nodeLore">-</p>
 
-            <div id="pointInfo" style="margin:8px 0;"></div>
-            <div id="resetPointInfo" style="margin:8px 0;"></div>
-<button id="btnAllocate" disabled>Allocate</button>
-<button id="btnUnallocate" disabled>Unallocate</button>
-<button id="btnSave" disabled style="width:100%; margin-top:8px;">Save</button>
+            <div class="point-box">
+    <div id="pointInfo"></div>
+    <div id="resetPointInfo"></div>
+</div>
+
+<div class="btn-row">
+    <button id="btnAllocate" class="btn btn-allocate" disabled>Allocate</button>
+    <button id="btnUnallocate" class="btn btn-unallocate" disabled>Unallocate</button>
+</div>
+<button id="btnSave" class="btn btn-save" disabled>Save</button>
+
     </div>
 </div>
 
